@@ -1,190 +1,620 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sinfonía de Horrores</title>
-  <meta
-    name="description"
-    content="Sinfonía de Horrores. Relatos de misterio, terror y lo inexplicable."
-  />
+    <title>Sinfonía de Horrores | Guillermo Reyes</title>
 
-  <link rel="stylesheet" href="style.css" />
+    <meta name="description"
+        content="Sinfonía de Horrores. Relatos de horror cósmico, sobrenatural y misterio escritos por Guillermo Reyes.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- FONDO DECORATIVO -->
-  <div class="fondo"></div>
-  <div class="bruma bruma-1"></div>
-  <div class="bruma bruma-2"></div>
+    <!-- LUZ QUE SIGUE AL CURSOR -->
+    <div class="cursor-luz" id="cursorLuz"></div>
 
-  <!-- NAV -->
-  <header class="topbar">
-    <a href="#inicio" class="marca">Sinfonía de Horrores</a>
+    <!-- NAVEGACIÓN -->
+    <header class="navbar">
 
-    <nav class="menu">
-      <a href="#relatos">Relatos</a>
-      <a href="#universo">Universo</a>
-      <a href="#autor">Autor</a>
-    </nav>
-  </header>
+        <a href="#inicio" class="logo">
+            <span>Sinfonía</span>
+            <small>de Horrores</small>
+        </a>
 
-  <!-- HERO -->
-  <section class="hero" id="inicio">
-    <div class="hero-contenido reveal">
-      <p class="subtitulo">Relatos de misterio, oscuridad y revelaciones</p>
+        <nav>
+            <a href="#relatos">Relatos</a>
+            <a href="#suenos">Sueños</a>
+            <a href="#sinfonia">Sinfonía</a>
+            <a href="#autor">Autor</a>
+            <a href="#comentarios">Comentarios</a>
+        </nav>
 
-      <h1>
-        Sinfonía<br />
-        de Horrores
-      </h1>
+    </header>
 
-      <div class="linea"></div>
 
-      <p class="descripcion">
-        Hay historias que terminan.
-        Otras continúan acechándote
-        incluso después de cerrar el libro.
-      </p>
+    <!-- ================================================= -->
+    <!-- INICIO -->
+    <!-- ================================================= -->
 
-      <div class="hero-botones">
-        <a href="#relatos" class="btn btn-principal">Explorar relatos</a>
-        <a href="#autor" class="btn btn-secundario">Conocer al autor</a>
-      </div>
-    </div>
-  </section>
+    <section class="hero" id="inicio">
 
-  <!-- RELATOS -->
-  <main>
-    <section class="seccion" id="relatos">
-      <div class="titulo-seccion reveal">
-        <span class="etiqueta">Colección</span>
-        <h2>Relatos</h2>
-        <p>
-          Cada historia abre una puerta distinta:
-          sangre, silencio, sombras y secretos
-          que jamás debieron despertar.
-        </p>
-      </div>
+        <div class="hero-ruido"></div>
+        <div class="halo halo-1"></div>
+        <div class="halo halo-2"></div>
 
-      <div class="grid-libros">
+        <div class="hero-contenido">
 
-        <!-- CIELO ROJO -->
-        <article class="libro reveal">
-          <div class="libro-imagen">
-            <img src="Cielo Rojo.jpg" alt="Portada de Cielo Rojo" />
-            <div class="sombra-imagen"></div>
-          </div>
-
-          <div class="libro-info">
-            <span class="tipo">Relato</span>
-            <h3>Cielo Rojo</h3>
-
-            <p>
-              Una historia envuelta en tensión, presagios y una atmósfera
-              donde el peligro parece anunciarse desde el cielo mismo.
+            <p class="sobrelinea">
+                RELATOS DE HORROR · MISTERIO · LO DESCONOCIDO
             </p>
 
-            <div class="acciones">
-              <a href="PON_AQUI_EL_LINK_DE_CIELO_ROJO" target="_blank" class="btn btn-principal">
-                Leer ahora
-              </a>
+            <h1>
+                <span>Sinfonía</span>
+                <span class="de">de</span>
+                <span>Horrores</span>
+            </h1>
+
+            <div class="ornamento">
+                <span></span>
+                <b>◆</b>
+                <span></span>
             </div>
-          </div>
-        </article>
 
-        <!-- LA CUEVA -->
-        <article class="libro reveal">
-          <div class="libro-imagen">
-            <img src="La Cueva.jpg" alt="Portada de La Cueva" />
-            <div class="sombra-imagen"></div>
-          </div>
-
-          <div class="libro-info">
-            <span class="tipo">Relato</span>
-            <h3>La Cueva</h3>
-
-            <p>
-              Lo que se esconde bajo la tierra no siempre quiere permanecer
-              enterrado. A veces, solo espera a ser encontrado.
+            <p class="lema">
+                Cada relato es una nota.<br>
+                <strong>El horror es la melodía.</strong>
             </p>
 
-            <div class="acciones">
-              <a href="PON_AQUI_EL_LINK_DE_LA_CUEVA" target="_blank" class="btn btn-principal">
-                Leer ahora
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <!-- MATEO -->
-        <article class="libro reveal proximo">
-          <div class="libro-imagen">
-            <img src="Mateo.jpg" alt="Portada de Mateo" />
-            <div class="sombra-imagen"></div>
-            <span class="badge">Próximamente</span>
-          </div>
-
-          <div class="libro-info">
-            <span class="tipo">Nuevo relato</span>
-            <h3>Mateo</h3>
-
-            <p>
-              Una próxima historia que se aproxima desde las sombras.
-              El nombre apenas se susurra, pero ya deja una inquietud en el aire.
+            <p class="intro">
+                Historias sobre aquello que preferiríamos no encontrar,
+                pero que quizá ya nos ha encontrado.
             </p>
 
-            <div class="acciones">
-              <span class="btn btn-bloqueado">Próximamente</span>
-            </div>
-          </div>
-        </article>
+            <a href="#relatos" class="boton-principal">
+                DESCENDER A LOS RELATOS
+                <span>↓</span>
+            </a>
 
-      </div>
+        </div>
+
+        <div class="scroll-indicador">
+            <span>DESCIENDE</span>
+            <div></div>
+        </div>
+
     </section>
 
-    <!-- UNIVERSO -->
-    <section class="seccion universo" id="universo">
-      <div class="contenedor-universo reveal">
-        <span class="etiqueta">El proyecto</span>
-        <h2>El universo de Sinfonía de Horrores</h2>
-        <p>
-          <strong>Sinfonía de Horrores</strong> es un espacio dedicado a relatos
-          donde el misterio, el terror, la tensión y lo inexplicable se entrelazan
-          para formar pequeñas puertas hacia lo desconocido.
-        </p>
-        <p>
-          Cada portada, cada historia y cada nombre forman parte de una atmósfera
-          pensada para provocar curiosidad, inquietud y esa sensación de que algo
-          oculto te observa desde el otro lado.
-        </p>
-      </div>
+
+    <!-- ================================================= -->
+    <!-- RELATOS -->
+    <!-- ================================================= -->
+
+    <section class="seccion relatos" id="relatos">
+
+        <div class="encabezado-seccion">
+
+            <span class="numero">I</span>
+
+            <p class="mini-titulo">LOS ARCHIVOS</p>
+
+            <h2>Relatos</h2>
+
+            <p>
+                No hay una historia principal.
+                Cada relato abre una puerta distinta hacia lo desconocido.
+            </p>
+
+        </div>
+
+
+        <div class="grid-relatos">
+
+            <!-- LA CUEVA -->
+
+            <article class="libro">
+
+                <div class="portada-contenedor">
+
+                    <img src="La Cueva.jpg"
+                         alt="Portada de La Cueva"
+                         class="portada">
+
+                    <div class="portada-oscuridad"></div>
+
+                    <span class="estado disponible">
+                        DISPONIBLE
+                    </span>
+
+                </div>
+
+                <div class="libro-contenido">
+
+                    <span class="genero">
+                        HORROR · MISTERIO
+                    </span>
+
+                    <h3>La Cueva</h3>
+
+                    <div class="separador"></div>
+
+                    <p>
+                        Hay lugares que permanecen ocultos por una razón.
+                        Bajo la tierra, algunas cosas solo esperan a que
+                        alguien sea lo bastante curioso para encontrarlas.
+                    </p>
+
+                    <a
+                        href="PON_AQUI_LINK_LA_CUEVA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="leer">
+
+                        LEER RELATO
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- CIELO ROJO -->
+
+            <article class="libro">
+
+                <div class="portada-contenedor">
+
+                    <img src="Cielo Rojo.jpg"
+                         alt="Portada de Cielo Rojo"
+                         class="portada">
+
+                    <div class="portada-oscuridad"></div>
+
+                    <span class="estado disponible">
+                        DISPONIBLE
+                    </span>
+
+                </div>
+
+                <div class="libro-contenido">
+
+                    <span class="genero">
+                        HORROR · SOBRENATURAL
+                    </span>
+
+                    <h3>Cielo Rojo</h3>
+
+                    <div class="separador"></div>
+
+                    <p>
+                        El cielo cambia y algo con él.
+                        Entre presagios y acontecimientos inexplicables,
+                        la realidad comienza a sentirse cada vez menos segura.
+                    </p>
+
+                    <a
+                        href="PON_AQUI_LINK_CIELO_ROJO"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="leer">
+
+                        LEER RELATO
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- MATEO -->
+
+            <article class="libro">
+
+                <div class="portada-contenedor">
+
+                    <img src="Mateo.jpg"
+                         alt="Portada de Mateo"
+                         class="portada">
+
+                    <div class="portada-oscuridad"></div>
+
+                    <span class="estado proximamente">
+                        PRÓXIMAMENTE
+                    </span>
+
+                </div>
+
+                <div class="libro-contenido">
+
+                    <span class="genero">
+                        NUEVO RELATO
+                    </span>
+
+                    <h3>Mateo</h3>
+
+                    <div class="separador"></div>
+
+                    <p>
+                        Su historia todavía permanece entre las sombras.
+                        Por ahora, solo hay un nombre.
+                        <strong>Mateo.</strong>
+                    </p>
+
+                    <span class="leer bloqueado">
+
+                        EL ARCHIVO AÚN NO ESTÁ COMPLETO
+                        <span>◇</span>
+
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
     </section>
 
+
+    <!-- ================================================= -->
+    <!-- NACIDOS DE LOS SUEÑOS -->
+    <!-- ================================================= -->
+
+    <section class="suenos" id="suenos">
+
+        <div class="suenos-fondo"></div>
+
+        <div class="suenos-contenido">
+
+            <span class="numero">II</span>
+
+            <p class="mini-titulo">
+                EL ORIGEN
+            </p>
+
+            <h2>
+                Nacidos de<br>
+                <em>los sueños</em>
+            </h2>
+
+            <div class="linea-roja"></div>
+
+            <p>
+                Muchas de las criaturas que aparecen en mis historias
+                no comienzan sobre una hoja de papel.
+                <strong>Aparecen primero mientras duermo.</strong>
+            </p>
+
+            <p>
+                A veces queda una figura, un lugar o solamente una sensación.
+                Después intento reconstruirla y convertirla en una historia.
+            </p>
+
+            <p>
+                Algunas cambian durante el proceso.
+                Otras permanecen inquietantemente parecidas
+                a como aparecieron por primera vez.
+            </p>
+
+        </div>
+
+        <div class="frase-gigante">
+            SUEÑOS
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- SOBRE SINFONÍA -->
+    <!-- ================================================= -->
+
+    <section class="seccion sinfonia" id="sinfonia">
+
+        <div class="sinfonia-grid">
+
+            <div class="sinfonia-titulo">
+
+                <span class="numero">III</span>
+
+                <p class="mini-titulo">
+                    EL PROYECTO
+                </p>
+
+                <h2>
+                    ¿Qué es<br>
+                    Sinfonía de<br>
+                    Horrores?
+                </h2>
+
+            </div>
+
+
+            <div class="sinfonia-texto">
+
+                <p class="destacado">
+                    Una sinfonía está formada por distintas piezas que,
+                    al unirse, crean algo mayor.
+                </p>
+
+                <p>
+                    <strong>Sinfonía de Horrores</strong> nace de una idea
+                    parecida: historias diferentes, criaturas diferentes
+                    y mundos diferentes unidos por una misma fascinación
+                    hacia lo desconocido.
+                </p>
+
+                <p>
+                    Aquí conviven el horror cósmico, lo sobrenatural,
+                    el misterio y aquello que existe justo fuera
+                    de nuestra comprensión.
+                </p>
+
+                <blockquote>
+                    “Cada relato es una nota.
+                    El horror es la melodía.”
+                </blockquote>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
     <!-- AUTOR -->
+    <!-- ================================================= -->
+
     <section class="seccion autor" id="autor">
-      <div class="tarjeta-autor reveal">
-        <span class="etiqueta">Autor</span>
-        <h2>Guillermo Reyes</h2>
-        <p>
-          Escritor de relatos de misterio y horror,
-          creador de <strong>Sinfonía de Horrores</strong>.
-        </p>
-        <p>
-          Aquí encontrarás historias donde el miedo cobra forma,
-          los secretos se abren paso y la oscuridad jamás está del todo dormida.
-        </p>
-      </div>
+
+        <div class="encabezado-seccion">
+
+            <span class="numero">IV</span>
+
+            <p class="mini-titulo">
+                DETRÁS DE LAS HISTORIAS
+            </p>
+
+            <h2>Guillermo Reyes</h2>
+
+            <p>
+                Escritor de horror cósmico, sobrenatural y misterio.
+            </p>
+
+        </div>
+
+
+        <div class="autor-contenido">
+
+            <div class="autor-monograma">
+                <span>GR</span>
+                <small>GUILLERMO REYES</small>
+            </div>
+
+
+            <div class="biografia">
+
+                <p>
+                    Guillermo Reyes comenzó a imaginar y escribir historias
+                    durante su adolescencia. A los 16 años, sus primeras ideas
+                    quedaban guardadas entre las notas de su teléfono.
+                </p>
+
+                <p>
+                    A los 19, con su primera computadora portátil,
+                    comenzó a dedicar más tiempo a experimentar con relatos,
+                    personajes, criaturas y mundos propios.
+                </p>
+
+                <p>
+                    Gran parte de sus historias nacen de los sueños.
+                    Criaturas, imágenes y situaciones que aparecen durante
+                    la noche terminan convirtiéndose en el punto de partida
+                    de seres y escenarios que después encuentran un lugar
+                    en sus relatos.
+                </p>
+
+                <p>
+                    Su principal fascinación se encuentra en el
+                    <strong>horror cósmico, lo sobrenatural y el misterio</strong>:
+                    historias donde el ser humano se enfrenta a algo que
+                    no comprende del todo y quizá nunca debería comprender.
+                </p>
+
+                <p>
+                    Fuera de la escritura, estudia
+                    <strong>Ingeniería en Mecatrónica</strong>
+                    y mantiene un especial interés por el cine de horror,
+                    particularmente el horror cósmico y el
+                    <em>found footage</em>.
+                </p>
+
+                <p>
+                    Actualmente desarrolla
+                    <strong>Sinfonía de Horrores</strong>,
+                    una colección en crecimiento de relatos unidos por
+                    una misma intención:
+                    mirar hacia aquello que permanece oculto y preguntarse
+                    qué ocurriría si alguna vez nos devolviera la mirada.
+                </p>
+
+            </div>
+
+        </div>
+
     </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© <span id="year"></span> Sinfonía de Horrores</p>
-    <p>Historias de Guillermo Reyes</p>
-  </footer>
 
-  <script src="script.js"></script>
+    <!-- ================================================= -->
+    <!-- INFLUENCIAS -->
+    <!-- ================================================= -->
+
+    <section class="influencias">
+
+        <div class="influencias-contenido">
+
+            <p class="mini-titulo">
+                INFLUENCIAS
+            </p>
+
+            <h2>
+                Ecos que alimentan<br>
+                la imaginación
+            </h2>
+
+            <div class="nombres">
+
+                <span>H. P. Lovecraft</span>
+                <span>Stephen King</span>
+                <span>Guillermo del Toro</span>
+                <span>Trevor Henderson</span>
+                <span>The Thing</span>
+                <span>The Mist</span>
+                <span>El gabinete de curiosidades</span>
+                <span>Found Footage</span>
+
+            </div>
+
+            <p class="nota-influencias">
+                Obras, autores y formas de contar historias que han alimentado
+                mi fascinación por las criaturas, lo desconocido y aquello
+                que se esconde detrás de lo cotidiano.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- COMENTARIOS -->
+    <!-- ================================================= -->
+
+    <section class="seccion comentarios" id="comentarios">
+
+        <div class="encabezado-seccion">
+
+            <span class="numero">V</span>
+
+            <p class="mini-titulo">
+                VOCES DE LOS LECTORES
+            </p>
+
+            <h2>
+                Ecos desde la oscuridad
+            </h2>
+
+            <p>
+                ¿Terminaste alguno de los relatos?
+                Cuéntame qué te pareció, qué teoría tienes
+                o qué fue lo que más te inquietó.
+            </p>
+
+        </div>
+
+
+        <div class="comentarios-caja">
+
+            <div class="comentarios-icono">
+                ◇
+            </div>
+
+            <!--
+                AQUÍ COLOCAREMOS GISCUS
+                EN EL SIGUIENTE PASO.
+            -->
+
+            <div id="giscus-container">
+
+                <p class="comentarios-espera">
+                    Las voces aún no han despertado.
+                </p>
+
+                <small>
+                    Próximamente podrás dejar aquí tus comentarios.
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- INSTAGRAM -->
+    <!-- ================================================= -->
+
+    <section class="instagram">
+
+        <p>
+            MÁS ALLÁ DE LAS HISTORIAS
+        </p>
+
+        <h2>
+            @reyesjeager
+        </h2>
+
+        <a
+            href="https://www.instagram.com/reyesjeager/"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            INSTAGRAM
+            <span>↗</span>
+
+        </a>
+
+    </section>
+
+
+    <!-- ================================================= -->
+    <!-- FOOTER -->
+    <!-- ================================================= -->
+
+    <footer>
+
+        <div>
+            <h3>Sinfonía de Horrores</h3>
+
+            <p>
+                Cada relato es una nota.<br>
+                El horror es la melodía.
+            </p>
+        </div>
+
+        <div class="footer-derecha">
+
+            <p>
+                © <span id="year"></span> Guillermo Reyes
+            </p>
+
+            <p>
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
