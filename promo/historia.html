@@ -6,9 +6,16 @@
 <meta charset="UTF-8">
 
 <meta name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no,
+               viewport-fit=cover">
 
-<title>Sinfonía de Horrores | Promoción</title>
+<title>Sinfonía de Horrores | Historia</title>
+
+
+<!-- FUENTES -->
 
 <link rel="preconnect"
       href="https://fonts.googleapis.com">
@@ -24,8 +31,9 @@
 
 <style>
 
+
 /* ================================================= */
-/* COLORES */
+/* VARIABLES */
 /* ================================================= */
 
 :root {
@@ -39,7 +47,7 @@
     --gris2: #625c59;
 
     --rojo: #920a2c;
-    --rojo-claro: #c31540;
+    --rojoClaro: #c31540;
 
     --cinzel: "Cinzel", serif;
     --literaria: "Cormorant Garamond", serif;
@@ -66,8 +74,7 @@ html,
 body {
 
     width: 100%;
-
-    min-height: 100%;
+    height: 100%;
 
 }
 
@@ -76,13 +83,12 @@ body {
 
     background: #000;
 
+    overflow: hidden;
+
     display: flex;
 
     justify-content: center;
-
-    align-items: flex-start;
-
-    overflow-x: hidden;
+    align-items: center;
 
     font-family: var(--texto);
 
@@ -90,7 +96,7 @@ body {
 
 
 /* ================================================= */
-/* LIENZO INSTAGRAM 1080 x 1920 */
+/* HISTORIA 1080 × 1920 */
 /* ================================================= */
 
 .story {
@@ -98,7 +104,7 @@ body {
     width: 1080px;
     height: 1920px;
 
-    flex-shrink: 0;
+    flex: none;
 
     position: relative;
 
@@ -106,25 +112,27 @@ body {
 
     color: var(--blanco);
 
+    transform-origin: center center;
+
 
     background:
 
         radial-gradient(
-            circle at 50% 33%,
-            rgba(146,10,44,.18),
-            transparent 32%
+            circle at 50% 32%,
+            rgba(146,10,44,.19),
+            transparent 33%
         ),
 
         radial-gradient(
-            circle at 15% 70%,
+            circle at 10% 70%,
             rgba(146,10,44,.08),
-            transparent 28%
+            transparent 29%
         ),
 
         radial-gradient(
-            circle at 88% 75%,
-            rgba(146,10,44,.07),
-            transparent 26%
+            circle at 92% 68%,
+            rgba(146,10,44,.065),
+            transparent 27%
         ),
 
         linear-gradient(
@@ -137,7 +145,7 @@ body {
 }
 
 
-/* textura */
+/* TEXTURA */
 
 .story::before {
 
@@ -169,7 +177,7 @@ body {
 }
 
 
-/* marco */
+/* MARCO EXTERIOR */
 
 .story::after {
 
@@ -179,12 +187,12 @@ body {
 
     inset: 28px;
 
+    pointer-events: none;
+
     border:
 
         1px solid
         rgba(255,255,255,.04);
-
-    pointer-events: none;
 
 }
 
@@ -200,10 +208,12 @@ body {
     width: 760px;
     height: 760px;
 
+    top: 260px;
     left: 160px;
-    top: 300px;
 
     border-radius: 50%;
+
+    filter: blur(55px);
 
 
     background:
@@ -212,16 +222,60 @@ body {
 
             circle,
 
-            rgba(146,10,44,.13),
+            rgba(146,10,44,.14),
 
-            transparent 66%
+            transparent 67%
 
         );
 
-    filter: blur(55px);
+}
+
+
+/* HALOS INFERIORES */
+
+.halo-izquierda {
+
+    position: absolute;
+
+    width: 420px;
+    height: 600px;
+
+    left: -180px;
+    bottom: 280px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    background:
+
+        rgba(146,10,44,.06);
 
 }
 
+
+.halo-derecha {
+
+    position: absolute;
+
+    width: 420px;
+    height: 600px;
+
+    right: -180px;
+    bottom: 180px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    background:
+
+        rgba(146,10,44,.05);
+
+}
+
+
+/* LÍNEA SUPERIOR */
 
 .linea-superior {
 
@@ -243,7 +297,7 @@ body {
 
             transparent,
 
-            rgba(146,10,44,.72),
+            rgba(146,10,44,.75),
 
             transparent
 
@@ -298,8 +352,8 @@ body {
 
     text-shadow:
 
-        0 12px 45px
-        rgba(0,0,0,.7);
+        0 12px 50px
+        rgba(0,0,0,.75);
 
 }
 
@@ -312,6 +366,8 @@ body {
 
 
 .header h1 .de {
+
+    margin: 17px 0;
 
     font-family: var(--literaria);
 
@@ -327,16 +383,16 @@ body {
 
     color: #8d8581;
 
-    margin: 17px 0;
-
 }
 
 
-/* ornamento */
+/* ================================================= */
+/* ORNAMENTO */
+/* ================================================= */
 
 .ornamento {
 
-    margin-top: 29px;
+    margin-top: 30px;
 
     display: flex;
 
@@ -435,7 +491,7 @@ body {
 
 
 /* ================================================= */
-/* PORTADAS */
+/* LIBROS */
 /* ================================================= */
 
 .libros {
@@ -446,16 +502,11 @@ body {
 
     width: 880px;
 
-    margin:
-
-        62px auto
-        0;
+    margin: 62px auto 0;
 
     display: grid;
 
-    grid-template-columns:
-
-        1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
     gap: 44px;
 
@@ -469,7 +520,7 @@ body {
 }
 
 
-/* marco portada */
+/* PORTADA */
 
 .marco {
 
@@ -521,7 +572,6 @@ body {
     display: block;
 
     width: 100%;
-
     height: 570px;
 
     object-fit: cover;
@@ -529,7 +579,7 @@ body {
 }
 
 
-/* etiqueta */
+/* DISPONIBLE */
 
 .estado {
 
@@ -538,17 +588,15 @@ body {
     top: 25px;
     left: 25px;
 
-    padding:
+    padding: 10px 15px;
 
-        10px
-        15px;
 
     color: #dfd0d3;
 
 
     background:
 
-        rgba(7,7,8,.84);
+        rgba(7,7,8,.86);
 
 
     border:
@@ -564,13 +612,13 @@ body {
 }
 
 
-/* título libro */
+/* INFORMACIÓN DEL LIBRO */
 
 .info {
 
-    text-align: center;
-
     padding-top: 24px;
+
+    text-align: center;
 
 }
 
@@ -604,7 +652,7 @@ body {
 
 
 /* ================================================= */
-/* LEMA */
+/* FRASE */
 /* ================================================= */
 
 .lema {
@@ -615,10 +663,7 @@ body {
 
     width: 820px;
 
-    margin:
-
-        63px auto
-        0;
+    margin: 62px auto 0;
 
     text-align: center;
 
@@ -634,10 +679,7 @@ body {
     width: 72px;
     height: 1px;
 
-    margin:
-
-        0 auto
-        28px;
+    margin: 0 auto 28px;
 
     background: var(--rojo);
 
@@ -667,7 +709,7 @@ body {
 
 
 /* ================================================= */
-/* BOTÓN FALSO / CTA */
+/* CTA */
 /* ================================================= */
 
 .cta {
@@ -678,16 +720,9 @@ body {
 
     width: 750px;
 
-    margin:
+    margin: 48px auto 0;
 
-        49px auto
-        0;
-
-    padding:
-
-        26px
-        20px;
-
+    padding: 26px 20px;
 
     text-align: center;
 
@@ -750,10 +785,7 @@ body {
     width: 170px;
     height: 1px;
 
-    margin:
-
-        17px auto
-        0;
+    margin: 17px auto 0;
 
 
     background:
@@ -786,7 +818,7 @@ body {
     left: 0;
     right: 0;
 
-    bottom: 92px;
+    bottom: 86px;
 
     text-align: center;
 
@@ -826,7 +858,6 @@ body {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     gap: 21px;
@@ -849,47 +880,25 @@ body {
 
 
 /* ================================================= */
-/* AJUSTE AUTOMÁTICO PARA IPHONE / CELULAR */
+/* EVITA SELECCIÓN ACCIDENTAL */
 /* ================================================= */
 
-@media (max-width: 1080px) {
+.story {
 
-    body {
+    user-select: none;
 
-        width: 100vw;
+    -webkit-user-select: none;
 
-        min-height:
-            calc(100vw * 16 / 9);
-
-    }
+}
 
 
-    .story {
+/* ================================================= */
+/* OCULTAR SCROLL */
+/* ================================================= */
 
-        transform-origin:
+::-webkit-scrollbar {
 
-            top center;
-
-
-        transform:
-
-            scale(
-                calc(100vw / 1080)
-            );
-
-
-        margin-bottom:
-
-            calc(
-                -1920px
-                +
-                (
-                    1920px *
-                    (100vw / 1080)
-                )
-            );
-
-    }
+    display: none;
 
 }
 
@@ -901,17 +910,25 @@ body {
 <body>
 
 
-<div class="story">
+<div class="story"
+     id="story">
 
+
+    <!-- FONDOS -->
 
     <div class="luz-central"></div>
+
+    <div class="halo-izquierda"></div>
+
+    <div class="halo-derecha"></div>
 
     <div class="linea-superior"></div>
 
 
-    <!-- ===================================== -->
+
+    <!-- ================================================= -->
     <!-- ENCABEZADO -->
-    <!-- ===================================== -->
+    <!-- ================================================= -->
 
     <header class="header">
 
@@ -929,11 +946,9 @@ body {
                 Sinfonía
             </span>
 
-
             <span class="de">
                 de
             </span>
-
 
             <span>
                 Horrores
@@ -959,18 +974,19 @@ body {
 
 
 
-    <!-- ===================================== -->
+    <!-- ================================================= -->
     <!-- INTRO -->
-    <!-- ===================================== -->
+    <!-- ================================================= -->
 
     <section class="introduccion">
 
         <p>
 
-            Historias de horror,
-            misterio y aquello que
+            Historias de horror, misterio
 
             <br>
+
+            y aquello que
 
             <strong>
                 quizá nunca debimos encontrar.
@@ -982,9 +998,9 @@ body {
 
 
 
-    <!-- ===================================== -->
-    <!-- LIBROS -->
-    <!-- ===================================== -->
+    <!-- ================================================= -->
+    <!-- PORTADAS -->
+    <!-- ================================================= -->
 
     <section class="libros">
 
@@ -997,19 +1013,15 @@ body {
             <div class="marco">
 
 
-                <!--
-                    IMPORTANTE:
-                    ../ significa que la portada está
-                    una carpeta atrás
-                -->
-
                 <img
                     src="../La Cueva.jpg"
                     alt="Portada de La Cueva">
 
 
                 <div class="estado">
+
                     DISPONIBLE
+
                 </div>
 
 
@@ -1047,7 +1059,9 @@ body {
 
 
                 <div class="estado">
+
                     DISPONIBLE
+
                 </div>
 
 
@@ -1074,11 +1088,12 @@ body {
 
 
 
-    <!-- ===================================== -->
+    <!-- ================================================= -->
     <!-- LEMA -->
-    <!-- ===================================== -->
+    <!-- ================================================= -->
 
     <section class="lema">
+
 
         <p>
 
@@ -1092,24 +1107,29 @@ body {
 
         </p>
 
+
     </section>
 
 
 
-    <!-- ===================================== -->
-    <!-- LLAMADO -->
-    <!-- ===================================== -->
+    <!-- ================================================= -->
+    <!-- LLAMADO A LEER -->
+    <!-- ================================================= -->
 
     <section class="cta">
 
 
         <small>
+
             DISPONIBLES PARA LEER GRATIS
+
         </small>
 
 
         <strong>
+
             LEE LOS RELATOS
+
         </strong>
 
 
@@ -1120,38 +1140,48 @@ body {
 
 
 
-    <!-- ===================================== -->
+    <!-- ================================================= -->
     <!-- PIE -->
-    <!-- ===================================== -->
+    <!-- ================================================= -->
 
     <footer class="footer">
 
 
         <p class="autor">
+
             GUILLERMO REYES
+
         </p>
 
 
         <p class="instagram">
+
             @REYESJEAGER
+
         </p>
 
 
         <div class="generos">
 
+
             Horror
+
 
             <span>
                 ◇
             </span>
+
 
             Misterio
 
+
             <span>
                 ◇
             </span>
 
+
             Lo desconocido
+
 
         </div>
 
@@ -1160,6 +1190,201 @@ body {
 
 
 </div>
+
+
+
+<!-- ================================================= -->
+<!-- AJUSTE AUTOMÁTICO -->
+<!-- ================================================= -->
+
+<script>
+
+
+function ajustarHistoria() {
+
+
+    const historia =
+        document.getElementById("story");
+
+
+    if (!historia) {
+
+        return;
+
+    }
+
+
+    const ANCHO_DISENO = 1080;
+
+    const ALTO_DISENO = 1920;
+
+
+
+    /*
+        En iPhone visualViewport permite conocer
+        el área realmente visible de Safari.
+    */
+
+
+    let anchoDisponible;
+
+    let altoDisponible;
+
+
+
+    if (window.visualViewport) {
+
+
+        anchoDisponible =
+            window.visualViewport.width;
+
+
+        altoDisponible =
+            window.visualViewport.height;
+
+
+    } else {
+
+
+        anchoDisponible =
+            window.innerWidth;
+
+
+        altoDisponible =
+            window.innerHeight;
+
+
+    }
+
+
+
+    /*
+        Dejamos un pequeño margen para evitar
+        cualquier recorte causado por Safari.
+    */
+
+
+    const margen = 8;
+
+
+    anchoDisponible -= margen;
+
+    altoDisponible -= margen;
+
+
+
+    /*
+        Calculamos cuánto cabe por ancho
+        y cuánto cabe por altura.
+    */
+
+
+    const escalaPorAncho =
+        anchoDisponible /
+        ANCHO_DISENO;
+
+
+    const escalaPorAlto =
+        altoDisponible /
+        ALTO_DISENO;
+
+
+
+    /*
+        Utilizamos la escala más pequeña.
+
+        Así TODO el póster entra completo.
+    */
+
+
+    let escala =
+        Math.min(
+
+            escalaPorAncho,
+
+            escalaPorAlto
+
+        );
+
+
+
+    /*
+        En computadora evitamos que crezca
+        más allá de su tamaño original.
+    */
+
+
+    escala =
+        Math.min(
+            escala,
+            1
+        );
+
+
+
+    historia.style.transform =
+
+        `scale(${escala})`;
+
+
+}
+
+
+
+window.addEventListener(
+
+    "load",
+
+    ajustarHistoria
+
+);
+
+
+window.addEventListener(
+
+    "resize",
+
+    ajustarHistoria
+
+);
+
+
+window.addEventListener(
+
+    "orientationchange",
+
+    () => {
+
+        setTimeout(
+
+            ajustarHistoria,
+
+            150
+
+        );
+
+    }
+
+);
+
+
+
+if (window.visualViewport) {
+
+
+    window.visualViewport.addEventListener(
+
+        "resize",
+
+        ajustarHistoria
+
+    );
+
+
+}
+
+
+</script>
 
 
 </body>
