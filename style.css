@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #eeeeee;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+/* PORTADA PRINCIPAL */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.95)
+        ),
+        radial-gradient(
+            circle at center,
+            #311016 0%,
+            #0b0909 45%,
+            #000000 100%
+        );
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 9vw, 7rem);
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 0 0 25px rgba(150, 0, 25, 0.5);
+}
+
+.hero .linea {
+    width: 90px;
+    height: 2px;
+    background: #8b1024;
+    margin: 15px auto 30px;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #cfcfcf;
+    font-style: italic;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 14px 30px;
+    border: 1px solid #8b1024;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-family: Arial, sans-serif;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: #8b1024;
+    box-shadow: 0 0 25px rgba(139, 16, 36, 0.5);
+}
+
+/* RELATOS */
+
+.relatos {
+    padding: 100px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.relatos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 70px;
+}
+
+.contenedor-relatos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+}
+
+.relato {
+    text-align: center;
+}
+
+.relato img {
+    width: 100%;
+    max-width: 320px;
+    border-radius: 3px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transition: transform .35s ease;
+}
+
+.relato img:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.relato h3 {
+    margin-top: 25px;
+    font-size: 1.6rem;
+}
+
+.relato p {
+    color: #aaa;
+    margin: 15px auto;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* PIE */
+
+footer {
+    border-top: 1px solid #222;
+    padding: 50px 20px;
+    text-align: center;
+    color: #777;
+    font-family: Arial, sans-serif;
+    font-size: .85rem;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        letter-spacing: 4px;
+    }
+
+    .hero p {
+        font-size: 1.05rem;
+    }
+}
