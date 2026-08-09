@@ -12,13 +12,9 @@
                user-scalable=no,
                viewport-fit=cover">
 
-<title>Sinfonía de Horrores | Historia</title>
+<title>Sinfonía de Horrores | Guillermo Reyes</title>
 
-
-<!-- FUENTES -->
-
-<link rel="preconnect"
-      href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -28,13 +24,11 @@
     href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
     rel="stylesheet">
 
-
 <style>
 
-
-/* ================================================= */
-/* VARIABLES */
-/* ================================================= */
+/* ============================================= */
+/* COLORES */
+/* ============================================= */
 
 :root {
 
@@ -52,30 +46,24 @@
     --cinzel: "Cinzel", serif;
     --literaria: "Cormorant Garamond", serif;
     --texto: "Inter", sans-serif;
-
 }
 
 
-/* ================================================= */
+/* ============================================= */
 /* GENERAL */
-/* ================================================= */
+/* ============================================= */
 
 * {
-
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
 }
 
 
 html,
 body {
-
     width: 100%;
     height: 100%;
-
 }
 
 
@@ -86,18 +74,16 @@ body {
     overflow: hidden;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
     font-family: var(--texto);
-
 }
 
 
-/* ================================================= */
-/* HISTORIA 1080 × 1920 */
-/* ================================================= */
+/* ============================================= */
+/* HISTORIA 1080 x 1920 */
+/* ============================================= */
 
 .story {
 
@@ -114,24 +100,26 @@ body {
 
     transform-origin: center center;
 
+    user-select: none;
+    -webkit-user-select: none;
 
     background:
 
         radial-gradient(
-            circle at 50% 32%,
-            rgba(146,10,44,.19),
-            transparent 33%
+            circle at 50% 30%,
+            rgba(146,10,44,.20),
+            transparent 34%
         ),
 
         radial-gradient(
             circle at 10% 70%,
-            rgba(146,10,44,.08),
-            transparent 29%
+            rgba(146,10,44,.07),
+            transparent 28%
         ),
 
         radial-gradient(
-            circle at 92% 68%,
-            rgba(146,10,44,.065),
+            circle at 92% 70%,
+            rgba(146,10,44,.06),
             transparent 27%
         ),
 
@@ -141,11 +129,10 @@ body {
             #090709 48%,
             #040405 100%
         );
-
 }
 
 
-/* TEXTURA */
+/* textura */
 
 .story::before {
 
@@ -155,29 +142,22 @@ body {
 
     inset: 0;
 
+    opacity: .16;
+
     pointer-events: none;
-
-    opacity: .17;
-
 
     background-image:
 
         repeating-linear-gradient(
-
             0deg,
-
-            transparent 0px,
-
+            transparent 0,
             transparent 3px,
-
             rgba(255,255,255,.012) 4px
-
         );
-
 }
 
 
-/* MARCO EXTERIOR */
+/* marco exterior */
 
 .story::after {
 
@@ -187,19 +167,17 @@ body {
 
     inset: 28px;
 
-    pointer-events: none;
-
     border:
-
         1px solid
         rgba(255,255,255,.04);
 
+    pointer-events: none;
 }
 
 
-/* ================================================= */
+/* ============================================= */
 /* ATMÓSFERA */
-/* ================================================= */
+/* ============================================= */
 
 .luz-central {
 
@@ -208,49 +186,39 @@ body {
     width: 760px;
     height: 760px;
 
-    top: 260px;
+    top: 250px;
     left: 160px;
 
     border-radius: 50%;
 
     filter: blur(55px);
 
-
     background:
 
         radial-gradient(
-
             circle,
-
             rgba(146,10,44,.14),
-
             transparent 67%
-
         );
-
 }
 
-
-/* HALOS INFERIORES */
 
 .halo-izquierda {
 
     position: absolute;
 
-    width: 420px;
+    width: 500px;
     height: 600px;
 
-    left: -180px;
-    bottom: 280px;
+    left: -260px;
+    bottom: 250px;
 
     border-radius: 50%;
 
-    filter: blur(80px);
+    filter: blur(90px);
 
     background:
-
-        rgba(146,10,44,.06);
-
+        rgba(146,10,44,.055);
 }
 
 
@@ -258,24 +226,20 @@ body {
 
     position: absolute;
 
-    width: 420px;
+    width: 500px;
     height: 600px;
 
-    right: -180px;
+    right: -260px;
     bottom: 180px;
 
     border-radius: 50%;
 
-    filter: blur(80px);
+    filter: blur(90px);
 
     background:
-
-        rgba(146,10,44,.05);
-
+        rgba(146,10,44,.045);
 }
 
-
-/* LÍNEA SUPERIOR */
 
 .linea-superior {
 
@@ -288,27 +252,20 @@ body {
 
     height: 1px;
 
-
     background:
 
         linear-gradient(
-
             90deg,
-
             transparent,
-
             rgba(146,10,44,.75),
-
             transparent
-
         );
-
 }
 
 
-/* ================================================= */
+/* ============================================= */
 /* ENCABEZADO */
-/* ================================================= */
+/* ============================================= */
 
 .header {
 
@@ -316,10 +273,9 @@ body {
 
     z-index: 5;
 
-    padding-top: 132px;
+    padding-top: 125px;
 
     text-align: center;
-
 }
 
 
@@ -327,12 +283,11 @@ body {
 
     color: #716967;
 
-    font-size: 14px;
+    font-size: 13px;
 
     letter-spacing: 7px;
 
-    margin-bottom: 27px;
-
+    margin-bottom: 25px;
 }
 
 
@@ -340,9 +295,9 @@ body {
 
     font-family: var(--cinzel);
 
-    font-size: 76px;
+    font-size: 72px;
 
-    line-height: .96;
+    line-height: .95;
 
     font-weight: 500;
 
@@ -351,27 +306,22 @@ body {
     text-transform: uppercase;
 
     text-shadow:
-
-        0 12px 50px
-        rgba(0,0,0,.75);
-
+        0 12px 50px rgba(0,0,0,.75);
 }
 
 
 .header h1 span {
-
     display: block;
-
 }
 
 
 .header h1 .de {
 
-    margin: 17px 0;
+    margin: 14px 0;
 
     font-family: var(--literaria);
 
-    font-size: 30px;
+    font-size: 29px;
 
     font-weight: 400;
 
@@ -382,25 +332,23 @@ body {
     text-transform: lowercase;
 
     color: #8d8581;
-
 }
 
 
-/* ================================================= */
+/* ============================================= */
 /* ORNAMENTO */
-/* ================================================= */
+/* ============================================= */
 
 .ornamento {
 
-    margin-top: 30px;
+    margin-top: 28px;
 
     display: flex;
 
-    align-items: center;
     justify-content: center;
+    align-items: center;
 
     gap: 17px;
-
 }
 
 
@@ -409,19 +357,13 @@ body {
     width: 92px;
     height: 1px;
 
-
     background:
 
         linear-gradient(
-
             90deg,
-
             transparent,
-
             var(--rojo)
-
         );
-
 }
 
 
@@ -430,15 +372,10 @@ body {
     background:
 
         linear-gradient(
-
             90deg,
-
             var(--rojo),
-
             transparent
-
         );
-
 }
 
 
@@ -447,52 +384,64 @@ body {
     color: var(--rojo);
 
     font-size: 12px;
-
 }
 
 
-/* ================================================= */
-/* INTRODUCCIÓN */
-/* ================================================= */
+/* ============================================= */
+/* MENSAJE PERSONAL */
+/* ============================================= */
 
-.introduccion {
+.mensaje-personal {
 
     position: relative;
 
     z-index: 5;
 
-    margin-top: 40px;
+    width: 820px;
+
+    margin: 38px auto 0;
 
     text-align: center;
-
 }
 
 
-.introduccion p {
+.mensaje-personal .sobre {
+
+    color: #77706c;
+
+    font-family: var(--texto);
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+
+.mensaje-personal p {
 
     font-family: var(--literaria);
+
+    color: #aaa19d;
 
     font-size: 29px;
 
     line-height: 1.35;
-
-    color: #aaa19d;
-
 }
 
 
-.introduccion strong {
+.mensaje-personal strong {
 
-    color: #f0ebe7;
+    color: #f1ece8;
 
     font-weight: 500;
-
 }
 
 
-/* ================================================= */
-/* LIBROS */
-/* ================================================= */
+/* ============================================= */
+/* PORTADAS */
+/* ============================================= */
 
 .libros {
 
@@ -502,25 +451,21 @@ body {
 
     width: 880px;
 
-    margin: 62px auto 0;
+    margin: 52px auto 0;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 44px;
-
 }
 
 
 .libro {
-
     min-width: 0;
-
 }
 
-
-/* PORTADA */
 
 .marco {
 
@@ -530,12 +475,9 @@ body {
 
     background: #080809;
 
-
     border:
-
         1px solid
         rgba(255,255,255,.085);
-
 
     box-shadow:
 
@@ -544,7 +486,6 @@ body {
 
         0 0 55px
         rgba(146,10,44,.055);
-
 }
 
 
@@ -556,14 +497,11 @@ body {
 
     inset: -1px;
 
-    pointer-events: none;
-
-
     border:
-
         1px solid
         rgba(146,10,44,.17);
 
+    pointer-events: none;
 }
 
 
@@ -572,14 +510,13 @@ body {
     display: block;
 
     width: 100%;
-    height: 570px;
+    height: 545px;
 
     object-fit: cover;
-
 }
 
 
-/* DISPONIBLE */
+/* disponible */
 
 .estado {
 
@@ -588,38 +525,31 @@ body {
     top: 25px;
     left: 25px;
 
-    padding: 10px 15px;
-
+    padding:
+        10px 15px;
 
     color: #dfd0d3;
 
-
     background:
-
         rgba(7,7,8,.86);
 
-
     border:
-
         1px solid
         rgba(146,10,44,.45);
-
 
     font-size: 11px;
 
     letter-spacing: 3px;
-
 }
 
 
-/* INFORMACIÓN DEL LIBRO */
+/* información */
 
 .info {
 
-    padding-top: 24px;
+    padding-top: 22px;
 
     text-align: center;
-
 }
 
 
@@ -630,30 +560,28 @@ body {
     font-size: 11px;
 
     letter-spacing: 4px;
-
 }
 
 
 .info h2 {
 
-    margin-top: 10px;
+    margin-top: 9px;
 
     font-family: var(--cinzel);
 
-    font-size: 31px;
+    font-size: 30px;
 
     font-weight: 500;
 
     letter-spacing: 3px;
 
     color: #ebe5e1;
-
 }
 
 
-/* ================================================= */
-/* FRASE */
-/* ================================================= */
+/* ============================================= */
+/* LEMA */
+/* ============================================= */
 
 .lema {
 
@@ -663,10 +591,9 @@ body {
 
     width: 820px;
 
-    margin: 62px auto 0;
+    margin: 48px auto 0;
 
     text-align: center;
-
 }
 
 
@@ -679,10 +606,11 @@ body {
     width: 72px;
     height: 1px;
 
-    margin: 0 auto 28px;
+    margin:
+        0 auto
+        24px;
 
     background: var(--rojo);
-
 }
 
 
@@ -690,12 +618,11 @@ body {
 
     font-family: var(--literaria);
 
-    font-size: 38px;
+    font-size: 35px;
 
     line-height: 1.18;
 
     color: #c7bfbb;
-
 }
 
 
@@ -704,110 +631,120 @@ body {
     color: white;
 
     font-weight: 500;
-
 }
 
 
-/* ================================================= */
-/* CTA */
-/* ================================================= */
+/* ============================================= */
+/* TEXTO ANTES DEL STICKER */
+/* ============================================= */
 
-.cta {
+.enlace-texto {
 
     position: relative;
 
     z-index: 5;
 
-    width: 750px;
-
-    margin: 48px auto 0;
-
-    padding: 26px 20px;
+    margin-top: 37px;
 
     text-align: center;
-
-
-    border:
-
-        1px solid
-        rgba(146,10,44,.55);
-
-
-    background:
-
-        linear-gradient(
-
-            90deg,
-
-            rgba(146,10,44,.025),
-
-            rgba(146,10,44,.11),
-
-            rgba(146,10,44,.025)
-
-        );
-
 }
 
 
-.cta small {
+.enlace-texto small {
 
-    display: block;
-
-    margin-bottom: 11px;
-
-    color: #746c68;
+    color: #766e69;
 
     font-size: 11px;
 
     letter-spacing: 5px;
-
 }
 
 
-.cta strong {
+.enlace-texto h3 {
+
+    margin-top: 9px;
 
     font-family: var(--cinzel);
 
-    font-size: 27px;
+    font-size: 24px;
 
     font-weight: 500;
 
-    letter-spacing: 5px;
+    letter-spacing: 4px;
 
-    color: #e5ded9;
-
+    color: #ddd6d2;
 }
 
 
-.cta-linea {
+/* ============================================= */
+/* CASILLA VACÍA PARA STICKER DE INSTAGRAM */
+/* ============================================= */
 
-    width: 170px;
-    height: 1px;
+.sticker-slot {
 
-    margin: 17px auto 0;
+    position: relative;
 
+    z-index: 5;
+
+    width: 650px;
+    height: 92px;
+
+    margin: 24px auto 0;
+
+    border:
+        1px solid
+        rgba(146,10,44,.58);
 
     background:
 
         linear-gradient(
-
             90deg,
-
-            transparent,
-
-            var(--rojo),
-
-            transparent
-
+            rgba(146,10,44,.02),
+            rgba(146,10,44,.08),
+            rgba(146,10,44,.02)
         );
 
+    box-shadow:
+
+        inset 0 0 30px
+        rgba(146,10,44,.035),
+
+        0 15px 40px
+        rgba(0,0,0,.25);
 }
 
 
-/* ================================================= */
+/* pequeñas esquinas */
+
+.sticker-slot::before,
+.sticker-slot::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 32px;
+    height: 1px;
+
+    top: 50%;
+
+    background: var(--rojo);
+}
+
+
+.sticker-slot::before {
+    left: -16px;
+}
+
+
+.sticker-slot::after {
+    right: -16px;
+}
+
+
+/* ============================================= */
 /* PIE */
-/* ================================================= */
+/* ============================================= */
 
 .footer {
 
@@ -818,10 +755,9 @@ body {
     left: 0;
     right: 0;
 
-    bottom: 86px;
+    bottom: 74px;
 
     text-align: center;
-
 }
 
 
@@ -834,26 +770,24 @@ body {
     font-size: 15px;
 
     letter-spacing: 6px;
-
 }
 
 
 .instagram {
 
-    margin-top: 13px;
+    margin-top: 12px;
 
     color: #625b58;
 
     font-size: 12px;
 
     letter-spacing: 4px;
-
 }
 
 
 .generos {
 
-    margin-top: 27px;
+    margin-top: 25px;
 
     display: flex;
 
@@ -862,44 +796,25 @@ body {
 
     gap: 21px;
 
-
     color: #766e6a;
 
     font-family: var(--literaria);
 
     font-size: 19px;
-
 }
 
 
 .generos span {
-
     color: var(--rojo);
-
 }
 
 
-/* ================================================= */
-/* EVITA SELECCIÓN ACCIDENTAL */
-/* ================================================= */
-
-.story {
-
-    user-select: none;
-
-    -webkit-user-select: none;
-
-}
-
-
-/* ================================================= */
-/* OCULTAR SCROLL */
-/* ================================================= */
+/* ============================================= */
+/* SIN SCROLL */
+/* ============================================= */
 
 ::-webkit-scrollbar {
-
     display: none;
-
 }
 
 </style>
@@ -914,7 +829,7 @@ body {
      id="story">
 
 
-    <!-- FONDOS -->
+    <!-- fondo -->
 
     <div class="luz-central"></div>
 
@@ -925,10 +840,9 @@ body {
     <div class="linea-superior"></div>
 
 
-
-    <!-- ================================================= -->
-    <!-- ENCABEZADO -->
-    <!-- ================================================= -->
+    <!-- ======================================== -->
+    <!-- TÍTULO -->
+    <!-- ======================================== -->
 
     <header class="header">
 
@@ -973,34 +887,42 @@ body {
     </header>
 
 
+    <!-- ======================================== -->
+    <!-- MENSAJE PARA TU INSTAGRAM PERSONAL -->
+    <!-- ======================================== -->
 
-    <!-- ================================================= -->
-    <!-- INTRO -->
-    <!-- ================================================= -->
+    <section class="mensaje-personal">
 
-    <section class="introduccion">
+
+        <p class="sobre">
+
+            ALGO QUE TAMBIÉN HAGO
+
+        </p>
+
 
         <p>
 
-            Historias de horror, misterio
+            De vez en cuando escribo
+
+            <strong>
+                historias de horror.
+            </strong>
 
             <br>
 
-            y aquello que
-
-            <strong>
-                quizá nunca debimos encontrar.
-            </strong>
+            Si te da curiosidad leerlas,
+            puedes encontrarlas aquí.
 
         </p>
+
 
     </section>
 
 
-
-    <!-- ================================================= -->
-    <!-- PORTADAS -->
-    <!-- ================================================= -->
+    <!-- ======================================== -->
+    <!-- LIBROS -->
+    <!-- ======================================== -->
 
     <section class="libros">
 
@@ -1042,7 +964,6 @@ body {
 
 
         </article>
-
 
 
         <!-- CIELO ROJO -->
@@ -1087,10 +1008,9 @@ body {
     </section>
 
 
-
-    <!-- ================================================= -->
+    <!-- ======================================== -->
     <!-- LEMA -->
-    <!-- ================================================= -->
+    <!-- ======================================== -->
 
     <section class="lema">
 
@@ -1111,38 +1031,43 @@ body {
     </section>
 
 
+    <!-- ======================================== -->
+    <!-- ÁREA DEL LINK -->
+    <!-- ======================================== -->
 
-    <!-- ================================================= -->
-    <!-- LLAMADO A LEER -->
-    <!-- ================================================= -->
-
-    <section class="cta">
+    <section class="enlace-texto">
 
 
         <small>
 
-            DISPONIBLES PARA LEER GRATIS
+            SI QUIERES LEER LO QUE ESCRIBO
 
         </small>
 
 
-        <strong>
+        <h3>
 
-            LEE LOS RELATOS
+            MIS RELATOS ESTÁN AQUÍ
 
-        </strong>
-
-
-        <div class="cta-linea"></div>
+        </h3>
 
 
     </section>
 
 
+    <!--
+        ESTA CASILLA QUEDA VACÍA.
+        DESPUÉS DE HACER LA CAPTURA,
+        PONES AQUÍ ENCIMA EL STICKER
+        "ENLACE" DE INSTAGRAM.
+    -->
 
-    <!-- ================================================= -->
+    <div class="sticker-slot"></div>
+
+
+    <!-- ======================================== -->
     <!-- PIE -->
-    <!-- ================================================= -->
+    <!-- ======================================== -->
 
     <footer class="footer">
 
@@ -1192,10 +1117,9 @@ body {
 </div>
 
 
-
-<!-- ================================================= -->
-<!-- AJUSTE AUTOMÁTICO -->
-<!-- ================================================= -->
+<!-- ============================================= -->
+<!-- AJUSTE AUTOMÁTICO IPHONE / COMPUTADORA -->
+<!-- ============================================= -->
 
 <script>
 
@@ -1208,28 +1132,18 @@ function ajustarHistoria() {
 
 
     if (!historia) {
-
         return;
-
     }
 
 
-    const ANCHO_DISENO = 1080;
+    const ANCHO = 1080;
 
-    const ALTO_DISENO = 1920;
-
-
-
-    /*
-        En iPhone visualViewport permite conocer
-        el área realmente visible de Safari.
-    */
+    const ALTO = 1920;
 
 
     let anchoDisponible;
 
     let altoDisponible;
-
 
 
     if (window.visualViewport) {
@@ -1257,13 +1171,6 @@ function ajustarHistoria() {
     }
 
 
-
-    /*
-        Dejamos un pequeño margen para evitar
-        cualquier recorte causado por Safari.
-    */
-
-
     const margen = 8;
 
 
@@ -1272,46 +1179,19 @@ function ajustarHistoria() {
     altoDisponible -= margen;
 
 
-
-    /*
-        Calculamos cuánto cabe por ancho
-        y cuánto cabe por altura.
-    */
+    const escalaAncho =
+        anchoDisponible / ANCHO;
 
 
-    const escalaPorAncho =
-        anchoDisponible /
-        ANCHO_DISENO;
-
-
-    const escalaPorAlto =
-        altoDisponible /
-        ALTO_DISENO;
-
-
-
-    /*
-        Utilizamos la escala más pequeña.
-
-        Así TODO el póster entra completo.
-    */
+    const escalaAlto =
+        altoDisponible / ALTO;
 
 
     let escala =
         Math.min(
-
-            escalaPorAncho,
-
-            escalaPorAlto
-
+            escalaAncho,
+            escalaAlto
         );
-
-
-
-    /*
-        En computadora evitamos que crezca
-        más allá de su tamaño original.
-    */
 
 
     escala =
@@ -1321,65 +1201,44 @@ function ajustarHistoria() {
         );
 
 
-
     historia.style.transform =
-
         `scale(${escala})`;
-
 
 }
 
 
-
 window.addEventListener(
-
     "load",
-
     ajustarHistoria
-
 );
 
 
 window.addEventListener(
-
     "resize",
-
     ajustarHistoria
-
 );
 
 
 window.addEventListener(
-
     "orientationchange",
-
     () => {
 
         setTimeout(
-
             ajustarHistoria,
-
             150
-
         );
 
     }
-
 );
-
 
 
 if (window.visualViewport) {
 
 
     window.visualViewport.addEventListener(
-
         "resize",
-
         ajustarHistoria
-
     );
-
 
 }
 
