@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sinfonía de Horrores | Historia</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+rel="stylesheet">
+
+<style>
+
+:root{
+    --negro:#050506;
+    --negro2:#09090b;
+    --blanco:#eeeae5;
+    --gris:#8f8884;
+    --gris2:#5f5956;
+    --rojo:#920a2c;
+    --rojo2:#c31540;
+    --cinzel:"Cinzel",serif;
+    --literaria:"Cormorant Garamond",serif;
+    --texto:"Inter",sans-serif;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    font-family:var(--texto);
+}
+
+
+/* ================================================= */
+/* LIENZO DE HISTORIA: 1080 x 1920 */
+/* ================================================= */
+
+.story{
+
+    width:1080px;
+    height:1920px;
+
+    flex:none;
+
+    position:relative;
+    overflow:hidden;
+
+    color:var(--blanco);
+
+    background:
+
+        radial-gradient(
+            circle at 50% 34%,
+            rgba(146,10,44,.18),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            circle at 15% 70%,
+            rgba(146,10,44,.08),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 88% 72%,
+            rgba(146,10,44,.07),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            180deg,
+            #050506 0%,
+            #090709 48%,
+            #040405 100%
+        );
+
+}
+
+
+/* Textura extremadamente sutil */
+
+.story::before{
+
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    opacity:.17;
+
+    background-image:
+
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,.012) 4px
+        );
+
+    pointer-events:none;
+
+}
+
+
+.story::after{
+
+    content:"";
+
+    position:absolute;
+    inset:24px;
+
+    border:1px solid rgba(255,255,255,.035);
+
+    pointer-events:none;
+
+}
+
+
+/* ================================================= */
+/* DECORACIÓN */
+/* ================================================= */
+
+.luz{
+
+    width:680px;
+    height:680px;
+
+    position:absolute;
+
+    top:300px;
+    left:200px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            rgba(146,10,44,.12),
+            transparent 66%
+        );
+
+    filter:blur(45px);
+
+}
+
+
+.linea-superior{
+
+    position:absolute;
+
+    top:91px;
+    left:90px;
+    right:90px;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(146,10,44,.65),
+            transparent
+        );
+
+}
+
+
+/* ================================================= */
+/* ENCABEZADO */
+/* ================================================= */
+
+.header{
+
+    position:relative;
+
+    z-index:5;
+
+    padding-top:135px;
+
+    text-align:center;
+
+}
+
+
+.micro{
+
+    color:#6f6865;
+
+    font-size:14px;
+
+    letter-spacing:7px;
+
+    margin-bottom:25px;
+
+}
+
+
+h1{
+
+    font-family:var(--cinzel);
+
+    text-transform:uppercase;
+
+    font-size:76px;
+
+    font-weight:500;
+
+    letter-spacing:9px;
+
+    line-height:1;
+
+}
+
+
+.de{
+
+    display:block;
+
+    font-family:var(--literaria);
+
+    font-size:29px;
+
+    text-transform:lowercase;
+
+    font-style:italic;
+
+    font-weight:400;
+
+    letter-spacing:9px;
+
+    color:#857d79;
+
+    margin:15px 0 12px;
+
+}
+
+
+.ornamento{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    gap:16px;
+
+    margin-top:30px;
+
+}
+
+
+.ornamento span{
+
+    width:92px;
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--rojo)
+        );
+
+}
+
+
+.ornamento span:last-child{
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--rojo),
+            transparent
+        );
+
+}
+
+
+.ornamento b{
+
+    color:var(--rojo);
+
+    font-size:12px;
+
+}
+
+
+/* ================================================= */
+/* TEXTO PRESENTACIÓN */
+/* ================================================= */
+
+.presentacion{
+
+    position:relative;
+    z-index:5;
+
+    text-align:center;
+
+    margin-top:45px;
+
+}
+
+
+.presentacion p{
+
+    font-family:var(--literaria);
+
+    color:#aaa19d;
+
+    font-size:29px;
+
+    line-height:1.35;
+
+}
+
+
+.presentacion strong{
+
+    color:#eeeae5;
+
+    font-weight:500;
+
+}
+
+
+/* ================================================= */
+/* PORTADAS */
+/* ================================================= */
+
+.libros{
+
+    width:880px;
+
+    position:relative;
+    z-index:5;
+
+    margin:67px auto 0;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:42px;
+
+}
+
+
+.libro{
+
+    position:relative;
+
+}
+
+
+.marco{
+
+    position:relative;
+
+    background:#070708;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:13px;
+
+    box-shadow:
+        0 40px 80px rgba(0,0,0,.62),
+        0 0 45px rgba(146,10,44,.055);
+
+}
+
+
+.marco::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border:1px solid rgba(146,10,44,.16);
+
+    pointer-events:none;
+
+}
+
+
+.marco img{
+
+    display:block;
+
+    width:100%;
+    height:570px;
+
+    object-fit:cover;
+
+}
+
+
+.estado{
+
+    position:absolute;
+
+    top:26px;
+    left:26px;
+
+    padding:10px 15px;
+
+    background:rgba(8,8,9,.82);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(146,10,44,.38);
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    color:#d9c9cc;
+
+}
+
+
+.info{
+
+    padding-top:25px;
+
+    text-align:center;
+
+}
+
+
+.info small{
+
+    color:#6f6864;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+}
+
+
+.info h2{
+
+    font-family:var(--cinzel);
+
+    font-weight:500;
+
+    font-size:31px;
+
+    letter-spacing:3px;
+
+    margin-top:10px;
+
+    color:#e9e4df;
+
+}
+
+
+/* ================================================= */
+/* FRASE */
+/* ================================================= */
+
+.frase{
+
+    width:820px;
+
+    margin:68px auto 0;
+
+    position:relative;
+    z-index:5;
+
+    text-align:center;
+
+}
+
+
+.frase::before{
+
+    content:"";
+
+    display:block;
+
+    width:70px;
+    height:1px;
+
+    background:var(--rojo);
+
+    margin:0 auto 29px;
+
+}
+
+
+.frase p{
+
+    font-family:var(--literaria);
+
+    font-size:38px;
+
+    line-height:1.2;
+
+    color:#c9c1bd;
+
+}
+
+
+.frase strong{
+
+    font-weight:500;
+
+    color:white;
+
+}
+
+
+/* ================================================= */
+/* CTA */
+/* ================================================= */
+
+.cta{
+
+    position:relative;
+    z-index:5;
+
+    width:750px;
+
+    margin:55px auto 0;
+
+    padding:27px;
+
+    border:
+        1px solid rgba(146,10,44,.55);
+
+    text-align:center;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(146,10,44,.035),
+            rgba(146,10,44,.12),
+            rgba(146,10,44,.035)
+        );
+
+}
+
+
+.cta small{
+
+    display:block;
+
+    color:#766d69;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    margin-bottom:11px;
+
+}
+
+
+.cta strong{
+
+    font-family:var(--cinzel);
+
+    font-size:28px;
+
+    font-weight:500;
+
+    letter-spacing:5px;
+
+}
+
+
+.cta-linea{
+
+    width:180px;
+
+    height:1px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--rojo),
+            transparent
+        );
+
+    margin:17px auto 0;
+
+}
+
+
+/* ================================================= */
+/* PIE */
+/* ================================================= */
+
+.footer{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:107px;
+
+    z-index:5;
+
+    text-align:center;
+
+}
+
+
+.autor{
+
+    font-family:var(--cinzel);
+
+    color:#afa7a3;
+
+    letter-spacing:6px;
+
+    font-size:15px;
+
+}
+
+
+.instagram{
+
+    margin-top:14px;
+
+    color:#625b58;
+
+    font-size:12px;
+
+    letter-spacing:4px;
+
+}
+
+
+.generos{
+
+    margin-top:28px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+    color:#716967;
+
+    font-family:var(--literaria);
+
+    font-size:19px;
+
+}
+
+
+.generos span{
+
+    color:var(--rojo);
+
+}
+
+
+/* ================================================= */
+/* AJUSTAR A PANTALLAS PEQUEÑAS */
+/* ================================================= */
+
+@media(max-width:1080px){
+
+    body{
+        overflow-x:hidden;
+    }
+
+    .story{
+
+        transform-origin:top center;
+
+        transform:scale(calc(100vw / 1080));
+
+        margin-bottom:
+            calc(-1920px + (1920px * (100vw / 1080)));
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="story">
+
+
+    <div class="luz"></div>
+
+    <div class="linea-superior"></div>
+
+
+    <!-- ENCABEZADO -->
+
+    <header class="header">
+
+        <p class="micro">
+            DOS RELATOS · DOS PUERTAS HACIA LO DESCONOCIDO
+        </p>
+
+
+        <h1>
+
+            Sinfonía
+
+            <span class="de">
+                de
+            </span>
+
+            Horrores
+
+        </h1>
+
+
+        <div class="ornamento">
+
+            <span></span>
+
+            <b>◆</b>
+
+            <span></span>
+
+        </div>
+
+    </header>
+
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="presentacion">
+
+        <p>
+
+            Historias de horror,
+            misterio y aquello que
+
+            <br>
+
+            <strong>
+                quizá nunca debimos encontrar.
+            </strong>
+
+        </p>
+
+    </section>
+
+
+    <!-- LIBROS -->
+
+    <section class="libros">
+
+
+        <!-- LA CUEVA -->
+
+        <article class="libro">
+
+            <div class="marco">
+
+                <img
+                    src="La Cueva.jpg"
+                    alt="La Cueva">
+
+                <div class="estado">
+                    DISPONIBLE
+                </div>
+
+            </div>
+
+
+            <div class="info">
+
+                <small>
+                    RELATO
+                </small>
+
+                <h2>
+                    La Cueva
+                </h2>
+
+            </div>
+
+        </article>
+
+
+        <!-- CIELO ROJO -->
+
+        <article class="libro">
+
+            <div class="marco">
+
+                <img
+                    src="Cielo Rojo.jpg"
+                    alt="Cielo Rojo">
+
+                <div class="estado">
+                    DISPONIBLE
+                </div>
+
+            </div>
+
+
+            <div class="info">
+
+                <small>
+                    RELATO
+                </small>
+
+                <h2>
+                    Cielo Rojo
+                </h2>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- LEMA -->
+
+    <section class="frase">
+
+        <p>
+
+            Cada relato es una nota.
+
+            <br>
+
+            <strong>
+                El horror es la melodía.
+            </strong>
+
+        </p>
+
+    </section>
+
+
+    <!-- LLAMADA A LA ACCIÓN -->
+
+    <section class="cta">
+
+        <small>
+            DISPONIBLES PARA LEER GRATIS
+        </small>
+
+        <strong>
+            LEE LOS RELATOS
+        </strong>
+
+        <div class="cta-linea"></div>
+
+    </section>
+
+
+    <!-- PIE -->
+
+    <footer class="footer">
+
+        <p class="autor">
+            GUILLERMO REYES
+        </p>
+
+        <p class="instagram">
+            @REYESJEAGER
+        </p>
+
+
+        <div class="generos">
+
+            Horror
+
+            <span>◇</span>
+
+            Misterio
+
+            <span>◇</span>
+
+            Lo desconocido
+
+        </div>
+
+    </footer>
+
+
+</div>
+
+
+</body>
+
+</html>
