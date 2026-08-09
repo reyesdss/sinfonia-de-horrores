@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1.0,
+               maximum-scale=1.0,
+               user-scalable=no,
+               viewport-fit=cover">
+
+<title>Sinfonía de Horrores | Historia</title>
+
+
+<!-- FUENTES -->
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+
+<style>
+
+
+/* ================================================= */
+/* VARIABLES */
+/* ================================================= */
+
+:root {
+
+    --negro: #050506;
+    --negro2: #09090b;
+
+    --blanco: #eeeae5;
+
+    --gris: #948c88;
+    --gris2: #625c59;
+
+    --rojo: #920a2c;
+    --rojoClaro: #c31540;
+
+    --cinzel: "Cinzel", serif;
+    --literaria: "Cormorant Garamond", serif;
+    --texto: "Inter", sans-serif;
+
+}
+
+
+/* ================================================= */
+/* GENERAL */
+/* ================================================= */
+
+* {
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+
+body {
+
+    background: #000;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--texto);
+
+}
+
+
+/* ================================================= */
+/* HISTORIA 1080 × 1920 */
+/* ================================================= */
+
+.story {
+
+    width: 1080px;
+    height: 1920px;
+
+    flex: none;
+
+    position: relative;
+
+    overflow: hidden;
+
+    color: var(--blanco);
+
+    transform-origin: center center;
+
+
+    background:
+
+        radial-gradient(
+            circle at 50% 32%,
+            rgba(146,10,44,.19),
+            transparent 33%
+        ),
+
+        radial-gradient(
+            circle at 10% 70%,
+            rgba(146,10,44,.08),
+            transparent 29%
+        ),
+
+        radial-gradient(
+            circle at 92% 68%,
+            rgba(146,10,44,.065),
+            transparent 27%
+        ),
+
+        linear-gradient(
+            180deg,
+            #050506 0%,
+            #090709 48%,
+            #040405 100%
+        );
+
+}
+
+
+/* TEXTURA */
+
+.story::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: .17;
+
+
+    background-image:
+
+        repeating-linear-gradient(
+
+            0deg,
+
+            transparent 0px,
+
+            transparent 3px,
+
+            rgba(255,255,255,.012) 4px
+
+        );
+
+}
+
+
+/* MARCO EXTERIOR */
+
+.story::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 28px;
+
+    pointer-events: none;
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.04);
+
+}
+
+
+/* ================================================= */
+/* ATMÓSFERA */
+/* ================================================= */
+
+.luz-central {
+
+    position: absolute;
+
+    width: 760px;
+    height: 760px;
+
+    top: 260px;
+    left: 160px;
+
+    border-radius: 50%;
+
+    filter: blur(55px);
+
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(146,10,44,.14),
+
+            transparent 67%
+
+        );
+
+}
+
+
+/* HALOS INFERIORES */
+
+.halo-izquierda {
+
+    position: absolute;
+
+    width: 420px;
+    height: 600px;
+
+    left: -180px;
+    bottom: 280px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    background:
+
+        rgba(146,10,44,.06);
+
+}
+
+
+.halo-derecha {
+
+    position: absolute;
+
+    width: 420px;
+    height: 600px;
+
+    right: -180px;
+    bottom: 180px;
+
+    border-radius: 50%;
+
+    filter: blur(80px);
+
+    background:
+
+        rgba(146,10,44,.05);
+
+}
+
+
+/* LÍNEA SUPERIOR */
+
+.linea-superior {
+
+    position: absolute;
+
+    top: 92px;
+
+    left: 90px;
+    right: 90px;
+
+    height: 1px;
+
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            rgba(146,10,44,.75),
+
+            transparent
+
+        );
+
+}
+
+
+/* ================================================= */
+/* ENCABEZADO */
+/* ================================================= */
+
+.header {
+
+    position: relative;
+
+    z-index: 5;
+
+    padding-top: 132px;
+
+    text-align: center;
+
+}
+
+
+.micro {
+
+    color: #716967;
+
+    font-size: 14px;
+
+    letter-spacing: 7px;
+
+    margin-bottom: 27px;
+
+}
+
+
+.header h1 {
+
+    font-family: var(--cinzel);
+
+    font-size: 76px;
+
+    line-height: .96;
+
+    font-weight: 500;
+
+    letter-spacing: 9px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+
+        0 12px 50px
+        rgba(0,0,0,.75);
+
+}
+
+
+.header h1 span {
+
+    display: block;
+
+}
+
+
+.header h1 .de {
+
+    margin: 17px 0;
+
+    font-family: var(--literaria);
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    letter-spacing: 10px;
+
+    text-transform: lowercase;
+
+    color: #8d8581;
+
+}
+
+
+/* ================================================= */
+/* ORNAMENTO */
+/* ================================================= */
+
+.ornamento {
+
+    margin-top: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 17px;
+
+}
+
+
+.ornamento span {
+
+    width: 92px;
+    height: 1px;
+
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            var(--rojo)
+
+        );
+
+}
+
+
+.ornamento span:last-child {
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            var(--rojo),
+
+            transparent
+
+        );
+
+}
+
+
+.ornamento b {
+
+    color: var(--rojo);
+
+    font-size: 12px;
+
+}
+
+
+/* ================================================= */
+/* INTRODUCCIÓN */
+/* ================================================= */
+
+.introduccion {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin-top: 40px;
+
+    text-align: center;
+
+}
+
+
+.introduccion p {
+
+    font-family: var(--literaria);
+
+    font-size: 29px;
+
+    line-height: 1.35;
+
+    color: #aaa19d;
+
+}
+
+
+.introduccion strong {
+
+    color: #f0ebe7;
+
+    font-weight: 500;
+
+}
+
+
+/* ================================================= */
+/* LIBROS */
+/* ================================================= */
+
+.libros {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 880px;
+
+    margin: 62px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 44px;
+
+}
+
+
+.libro {
+
+    min-width: 0;
+
+}
+
+
+/* PORTADA */
+
+.marco {
+
+    position: relative;
+
+    padding: 12px;
+
+    background: #080809;
+
+
+    border:
+
+        1px solid
+        rgba(255,255,255,.085);
+
+
+    box-shadow:
+
+        0 42px 90px
+        rgba(0,0,0,.67),
+
+        0 0 55px
+        rgba(146,10,44,.055);
+
+}
+
+
+.marco::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -1px;
+
+    pointer-events: none;
+
+
+    border:
+
+        1px solid
+        rgba(146,10,44,.17);
+
+}
+
+
+.marco img {
+
+    display: block;
+
+    width: 100%;
+    height: 570px;
+
+    object-fit: cover;
+
+}
+
+
+/* DISPONIBLE */
+
+.estado {
+
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    padding: 10px 15px;
+
+
+    color: #dfd0d3;
+
+
+    background:
+
+        rgba(7,7,8,.86);
+
+
+    border:
+
+        1px solid
+        rgba(146,10,44,.45);
+
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* INFORMACIÓN DEL LIBRO */
+
+.info {
+
+    padding-top: 24px;
+
+    text-align: center;
+
+}
+
+
+.info small {
+
+    color: #69615e;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.info h2 {
+
+    margin-top: 10px;
+
+    font-family: var(--cinzel);
+
+    font-size: 31px;
+
+    font-weight: 500;
+
+    letter-spacing: 3px;
+
+    color: #ebe5e1;
+
+}
+
+
+/* ================================================= */
+/* FRASE */
+/* ================================================= */
+
+.lema {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 820px;
+
+    margin: 62px auto 0;
+
+    text-align: center;
+
+}
+
+
+.lema::before {
+
+    content: "";
+
+    display: block;
+
+    width: 72px;
+    height: 1px;
+
+    margin: 0 auto 28px;
+
+    background: var(--rojo);
+
+}
+
+
+.lema p {
+
+    font-family: var(--literaria);
+
+    font-size: 38px;
+
+    line-height: 1.18;
+
+    color: #c7bfbb;
+
+}
+
+
+.lema strong {
+
+    color: white;
+
+    font-weight: 500;
+
+}
+
+
+/* ================================================= */
+/* CTA */
+/* ================================================= */
+
+.cta {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 750px;
+
+    margin: 48px auto 0;
+
+    padding: 26px 20px;
+
+    text-align: center;
+
+
+    border:
+
+        1px solid
+        rgba(146,10,44,.55);
+
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            rgba(146,10,44,.025),
+
+            rgba(146,10,44,.11),
+
+            rgba(146,10,44,.025)
+
+        );
+
+}
+
+
+.cta small {
+
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: #746c68;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.cta strong {
+
+    font-family: var(--cinzel);
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    letter-spacing: 5px;
+
+    color: #e5ded9;
+
+}
+
+
+.cta-linea {
+
+    width: 170px;
+    height: 1px;
+
+    margin: 17px auto 0;
+
+
+    background:
+
+        linear-gradient(
+
+            90deg,
+
+            transparent,
+
+            var(--rojo),
+
+            transparent
+
+        );
+
+}
+
+
+/* ================================================= */
+/* PIE */
+/* ================================================= */
+
+.footer {
+
+    position: absolute;
+
+    z-index: 5;
+
+    left: 0;
+    right: 0;
+
+    bottom: 86px;
+
+    text-align: center;
+
+}
+
+
+.autor {
+
+    font-family: var(--cinzel);
+
+    color: #b2aaa6;
+
+    font-size: 15px;
+
+    letter-spacing: 6px;
+
+}
+
+
+.instagram {
+
+    margin-top: 13px;
+
+    color: #625b58;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.generos {
+
+    margin-top: 27px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 21px;
+
+
+    color: #766e6a;
+
+    font-family: var(--literaria);
+
+    font-size: 19px;
+
+}
+
+
+.generos span {
+
+    color: var(--rojo);
+
+}
+
+
+/* ================================================= */
+/* EVITA SELECCIÓN ACCIDENTAL */
+/* ================================================= */
+
+.story {
+
+    user-select: none;
+
+    -webkit-user-select: none;
+
+}
+
+
+/* ================================================= */
+/* OCULTAR SCROLL */
+/* ================================================= */
+
+::-webkit-scrollbar {
+
+    display: none;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="story"
+     id="story">
+
+
+    <!-- FONDOS -->
+
+    <div class="luz-central"></div>
+
+    <div class="halo-izquierda"></div>
+
+    <div class="halo-derecha"></div>
+
+    <div class="linea-superior"></div>
+
+
+
+    <!-- ================================================= -->
+    <!-- ENCABEZADO -->
+    <!-- ================================================= -->
+
+    <header class="header">
+
+
+        <p class="micro">
+
+            DOS RELATOS · DOS PUERTAS HACIA LO DESCONOCIDO
+
+        </p>
+
+
+        <h1>
+
+            <span>
+                Sinfonía
+            </span>
+
+            <span class="de">
+                de
+            </span>
+
+            <span>
+                Horrores
+            </span>
+
+        </h1>
+
+
+        <div class="ornamento">
+
+            <span></span>
+
+            <b>
+                ◆
+            </b>
+
+            <span></span>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- ================================================= -->
+    <!-- INTRO -->
+    <!-- ================================================= -->
+
+    <section class="introduccion">
+
+        <p>
+
+            Historias de horror, misterio
+
+            <br>
+
+            y aquello que
+
+            <strong>
+                quizá nunca debimos encontrar.
+            </strong>
+
+        </p>
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- PORTADAS -->
+    <!-- ================================================= -->
+
+    <section class="libros">
+
+
+        <!-- LA CUEVA -->
+
+        <article class="libro">
+
+
+            <div class="marco">
+
+
+                <img
+                    src="../La Cueva.jpg"
+                    alt="Portada de La Cueva">
+
+
+                <div class="estado">
+
+                    DISPONIBLE
+
+                </div>
+
+
+            </div>
+
+
+            <div class="info">
+
+                <small>
+                    RELATO
+                </small>
+
+                <h2>
+                    La Cueva
+                </h2>
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- CIELO ROJO -->
+
+        <article class="libro">
+
+
+            <div class="marco">
+
+
+                <img
+                    src="../Cielo Rojo.jpg"
+                    alt="Portada de Cielo Rojo">
+
+
+                <div class="estado">
+
+                    DISPONIBLE
+
+                </div>
+
+
+            </div>
+
+
+            <div class="info">
+
+                <small>
+                    RELATO
+                </small>
+
+                <h2>
+                    Cielo Rojo
+                </h2>
+
+            </div>
+
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- LEMA -->
+    <!-- ================================================= -->
+
+    <section class="lema">
+
+
+        <p>
+
+            Cada relato es una nota.
+
+            <br>
+
+            <strong>
+                El horror es la melodía.
+            </strong>
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- LLAMADO A LEER -->
+    <!-- ================================================= -->
+
+    <section class="cta">
+
+
+        <small>
+
+            DISPONIBLES PARA LEER GRATIS
+
+        </small>
+
+
+        <strong>
+
+            LEE LOS RELATOS
+
+        </strong>
+
+
+        <div class="cta-linea"></div>
+
+
+    </section>
+
+
+
+    <!-- ================================================= -->
+    <!-- PIE -->
+    <!-- ================================================= -->
+
+    <footer class="footer">
+
+
+        <p class="autor">
+
+            GUILLERMO REYES
+
+        </p>
+
+
+        <p class="instagram">
+
+            @REYESJEAGER
+
+        </p>
+
+
+        <div class="generos">
+
+
+            Horror
+
+
+            <span>
+                ◇
+            </span>
+
+
+            Misterio
+
+
+            <span>
+                ◇
+            </span>
+
+
+            Lo desconocido
+
+
+        </div>
+
+
+    </footer>
+
+
+</div>
+
+
+
+<!-- ================================================= -->
+<!-- AJUSTE AUTOMÁTICO -->
+<!-- ================================================= -->
+
+<script>
+
+
+function ajustarHistoria() {
+
+
+    const historia =
+        document.getElementById("story");
+
+
+    if (!historia) {
+
+        return;
+
+    }
+
+
+    const ANCHO_DISENO = 1080;
+
+    const ALTO_DISENO = 1920;
+
+
+
+    /*
+        En iPhone visualViewport permite conocer
+        el área realmente visible de Safari.
+    */
+
+
+    let anchoDisponible;
+
+    let altoDisponible;
+
+
+
+    if (window.visualViewport) {
+
+
+        anchoDisponible =
+            window.visualViewport.width;
+
+
+        altoDisponible =
+            window.visualViewport.height;
+
+
+    } else {
+
+
+        anchoDisponible =
+            window.innerWidth;
+
+
+        altoDisponible =
+            window.innerHeight;
+
+
+    }
+
+
+
+    /*
+        Dejamos un pequeño margen para evitar
+        cualquier recorte causado por Safari.
+    */
+
+
+    const margen = 8;
+
+
+    anchoDisponible -= margen;
+
+    altoDisponible -= margen;
+
+
+
+    /*
+        Calculamos cuánto cabe por ancho
+        y cuánto cabe por altura.
+    */
+
+
+    const escalaPorAncho =
+        anchoDisponible /
+        ANCHO_DISENO;
+
+
+    const escalaPorAlto =
+        altoDisponible /
+        ALTO_DISENO;
+
+
+
+    /*
+        Utilizamos la escala más pequeña.
+
+        Así TODO el póster entra completo.
+    */
+
+
+    let escala =
+        Math.min(
+
+            escalaPorAncho,
+
+            escalaPorAlto
+
+        );
+
+
+
+    /*
+        En computadora evitamos que crezca
+        más allá de su tamaño original.
+    */
+
+
+    escala =
+        Math.min(
+            escala,
+            1
+        );
+
+
+
+    historia.style.transform =
+
+        `scale(${escala})`;
+
+
+}
+
+
+
+window.addEventListener(
+
+    "load",
+
+    ajustarHistoria
+
+);
+
+
+window.addEventListener(
+
+    "resize",
+
+    ajustarHistoria
+
+);
+
+
+window.addEventListener(
+
+    "orientationchange",
+
+    () => {
+
+        setTimeout(
+
+            ajustarHistoria,
+
+            150
+
+        );
+
+    }
+
+);
+
+
+
+if (window.visualViewport) {
+
+
+    window.visualViewport.addEventListener(
+
+        "resize",
+
+        ajustarHistoria
+
+    );
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
