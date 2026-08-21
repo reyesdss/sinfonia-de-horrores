@@ -3214,3 +3214,152 @@ footer p {
     }
 
 }
+
+
+/* ======================================== */
+/* EMBLEMA PRINCIPAL */
+/* ======================================== */
+
+.simbolo-principal {
+    width: 125px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.simbolo-principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    opacity: .82;
+
+    filter:
+        drop-shadow(0 0 12px rgba(146,10,44,.22));
+
+    animation:
+        simboloEntrada 1.4s ease both;
+
+    transition:
+        opacity .4s ease,
+        filter .4s ease;
+}
+
+.simbolo-principal:hover img {
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 18px rgba(146,10,44,.38));
+}
+
+
+@keyframes simboloEntrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: .82;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ======================================== */
+/* TABLET */
+/* ======================================== */
+
+@media (max-width: 950px) {
+
+    .simbolo-principal {
+        width: 110px;
+        margin-bottom: 18px;
+    }
+
+}
+
+
+/* ======================================== */
+/* CELULAR */
+/* ======================================== */
+
+@media (max-width: 720px) {
+
+    .hero {
+        min-height: auto;
+        padding-top: 105px;
+        padding-bottom: 75px;
+    }
+
+    .simbolo-principal {
+        width: 82px;
+        margin-bottom: 15px;
+    }
+
+    .hero-contenido {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        max-width: 100%;
+        overflow-wrap: normal;
+    }
+
+    .hero-botones {
+        width: 100%;
+    }
+
+    .boton-principal,
+    .boton-secundario {
+        max-width: 100%;
+    }
+
+    .scroll-indicador {
+        display: none;
+    }
+
+}
+
+
+/* ======================================== */
+/* CELULARES PEQUEÑOS */
+/* ======================================== */
+
+@media (max-width: 420px) {
+
+    .hero {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .simbolo-principal {
+        width: 72px;
+    }
+
+    .sobrelinea {
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: clamp(
+            2.65rem,
+            14vw,
+            4rem
+        );
+    }
+
+    .hero-botones {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .boton-principal,
+    .boton-secundario {
+        width: 100%;
+        justify-content: center;
+    }
+
+}
