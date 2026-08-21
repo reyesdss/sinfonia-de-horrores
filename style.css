@@ -2887,3 +2887,330 @@ footer p {
     }
 
 }
+
+/* ======================================== */
+/* SÍMBOLO DE SINFONÍA DE HORRORES */
+/* ======================================== */
+
+.simbolo-principal {
+
+    width:
+        clamp(
+            115px,
+            12vw,
+            160px
+        );
+
+    margin:
+        0 auto
+        27px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    isolation: isolate;
+
+}
+
+
+/* ======================================== */
+/* HALO DETRÁS DEL SÍMBOLO */
+/* ======================================== */
+
+.simbolo-halo {
+
+    position: absolute;
+
+    width: 155%;
+    height: 155%;
+
+    border-radius: 50%;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(146,10,44,.24)
+            0%,
+
+            rgba(146,10,44,.12)
+            30%,
+
+            rgba(146,10,44,.04)
+            52%,
+
+            transparent
+            72%
+
+        );
+
+    filter:
+        blur(15px);
+
+    animation:
+
+        respiracionEmblema
+        6s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ======================================== */
+/* IMAGEN DEL SÍMBOLO */
+/* ======================================== */
+
+.simbolo-imagen {
+
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    position: relative;
+
+    z-index: 2;
+
+    opacity: .88;
+
+    filter:
+
+        brightness(1.03)
+
+        drop-shadow(
+            0 0 5px
+            rgba(255,255,255,.08)
+        )
+
+        drop-shadow(
+            0 0 16px
+            rgba(146,10,44,.20)
+        );
+
+    animation:
+
+        entradaEmblema
+        1.6s
+        cubic-bezier(.22,.8,.35,1)
+        both,
+
+        flotacionEmblema
+        7s
+        ease-in-out
+        1.6s
+        infinite;
+
+    transition:
+
+        opacity .5s ease,
+        filter .5s ease;
+
+}
+
+
+/* ======================================== */
+/* EFECTO AL PASAR EL CURSOR */
+/* ======================================== */
+
+.simbolo-principal:hover
+.simbolo-imagen {
+
+    opacity: 1;
+
+    filter:
+
+        brightness(1.12)
+
+        drop-shadow(
+            0 0 7px
+            rgba(255,255,255,.15)
+        )
+
+        drop-shadow(
+            0 0 25px
+            rgba(146,10,44,.36)
+        );
+
+}
+
+
+/* ======================================== */
+/* ENTRADA DEL SÍMBOLO */
+/* ======================================== */
+
+@keyframes entradaEmblema {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+
+            scale(.82)
+            translateY(10px);
+
+        filter:
+
+            blur(5px)
+            brightness(.7);
+
+    }
+
+
+    100% {
+
+        opacity: .88;
+
+        transform:
+
+            scale(1)
+            translateY(0);
+
+        filter:
+
+            blur(0)
+            brightness(1.03)
+
+            drop-shadow(
+                0 0 5px
+                rgba(255,255,255,.08)
+            )
+
+            drop-shadow(
+                0 0 16px
+                rgba(146,10,44,.20)
+            );
+
+    }
+
+}
+
+
+/* ======================================== */
+/* MOVIMIENTO MUY SUAVE */
+/* ======================================== */
+
+@keyframes flotacionEmblema {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:
+            translateY(-4px);
+
+    }
+
+}
+
+
+/* ======================================== */
+/* RESPIRACIÓN DEL HALO */
+/* ======================================== */
+
+@keyframes respiracionEmblema {
+
+    0%,
+    100% {
+
+        transform:
+            scale(.90);
+
+        opacity: .48;
+
+    }
+
+
+    50% {
+
+        transform:
+            scale(1.08);
+
+        opacity: .95;
+
+    }
+
+}
+
+
+/* ======================================== */
+/* AJUSTE DE ESPACIO DE LA SOBRELINEA */
+/* ======================================== */
+
+.simbolo-principal + .sobrelinea {
+
+    margin-top: 0;
+
+}
+
+
+/* ======================================== */
+/* SÍMBOLO EN CELULAR */
+/* ======================================== */
+
+@media (max-width: 720px) {
+
+    .simbolo-principal {
+
+        width: 98px;
+
+        margin:
+            0 auto
+            19px;
+
+    }
+
+
+    .simbolo-halo {
+
+        width: 165%;
+        height: 165%;
+
+        filter:
+            blur(12px);
+
+    }
+
+
+    .simbolo-imagen {
+
+        opacity: .9;
+
+    }
+
+}
+
+
+/* ======================================== */
+/* PANTALLAS MUY PEQUEÑAS */
+/* ======================================== */
+
+@media (max-width: 400px) {
+
+    .simbolo-principal {
+
+        width: 88px;
+
+        margin-bottom: 17px;
+
+    }
+
+}
