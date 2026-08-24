@@ -7,6 +7,11 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <!-- MODO DE EDICIÓN: evita que el navegador conserve una versión vieja -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <title>Sinfonía de Horrores | Guillermo Reyes</title>
 
     <meta name="description"
@@ -23,8 +28,15 @@
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet"
-          href="style.css">
+    <!-- CSS siempre actualizado mientras editas la página -->
+    <script>
+        window.SINFONIA_VERSION = Date.now();
+        document.write(
+            '<link rel="stylesheet" href="style.css?v=' +
+            window.SINFONIA_VERSION +
+            '">'
+        );
+    </script>
 </head>
 
 
@@ -217,7 +229,9 @@
 
 </section>
 
-    
+
+    <main>
+
         <!-- ============================= -->
         <!-- RELATOS -->
         <!-- ============================= -->
@@ -1014,3 +1028,19 @@
 
 
 </footer>
+
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT SIEMPRE ACTUALIZADO -->
+    <!-- ============================= -->
+
+    <script>
+        const scriptPrincipal = document.createElement("script");
+        scriptPrincipal.src =
+            "script.js?v=" + (window.SINFONIA_VERSION || Date.now());
+        document.body.appendChild(scriptPrincipal);
+    </script>
+
+</body>
+
+</html>
