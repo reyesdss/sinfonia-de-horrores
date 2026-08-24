@@ -3365,6 +3365,54 @@ footer p {
 }
 
 /* ======================================== */
+/* AJUSTES DE NAVEGACIÓN / ANCLAS */
+/* ======================================== */
+
+html {
+    scroll-padding-top: 96px;
+}
+
+#inicio,
+#relatos,
+#suenos,
+#sinfonia,
+#autor,
+#comentarios {
+    scroll-margin-top: 96px;
+}
+
+
+/* ======================================== */
+/* LUZ QUE SIGUE AL CURSOR */
+/* ======================================== */
+
+.cursor-luz {
+    z-index: 2;
+    opacity: 1;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(146,10,44,.12) 0%,
+            rgba(146,10,44,.07) 28%,
+            rgba(146,10,44,.025) 48%,
+            transparent 68%
+        );
+
+    filter: blur(2px);
+
+    transition:
+        opacity .25s ease;
+}
+
+@media (hover: none), (pointer: coarse) {
+    .cursor-luz {
+        display: none;
+    }
+}
+
+
+/* ======================================== */
 /* TIPOGRAFÍA RÚNICA */
 /* ======================================== */
 
@@ -3377,28 +3425,35 @@ footer p {
 }
 
 
-
 /* ======================================== */
 /* BASE DE LOS MENSAJES RÚNICOS */
 /* ======================================== */
 
 .mensaje-runa {
+    width: 100%;
 
     font-family: "Runas" !important;
-
     font-weight: normal;
     font-style: normal;
-
     text-transform: none;
 
+    white-space: normal;
+    overflow: visible;
+    overflow-wrap: normal;
+    word-break: normal;
+
     user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 
     cursor: default;
 
     transition:
-        opacity .6s ease,
-        color .6s ease,
-        text-shadow .6s ease;
+        opacity .35s ease,
+        color .35s ease,
+        text-shadow .35s ease,
+        transform .35s ease;
 }
 
 
@@ -3408,66 +3463,34 @@ footer p {
 /* ======================================== */
 
 .runa-portada {
+    max-width: 760px;
 
     margin:
-
         0 auto
         25px;
 
-    min-height: 22px;
+    min-height: 24px;
 
     color:
-
-        rgba(
-            238,
-            234,
-            229,
-            .28
-        );
+        rgba(238,234,229,.55);
 
     font-size:
-
         clamp(
-            .72rem,
-            1.15vw,
-            .95rem
+            .76rem,
+            1.2vw,
+            1rem
         );
 
-    letter-spacing: 8px;
+    letter-spacing: 7px;
+    word-spacing: 11px;
+    line-height: 1.7;
 
-    line-height: 1.5;
-
-    opacity: .55;
-
+    opacity: .78;
 }
-
 
 .runa-portada::before {
-
     content:
         "\000053\000049\000047\000055\000045 \000045\000053\000043\000055\000043\000048\000041\00004E\000044\00004F";
-
-}
-
-
-.runa-portada:hover {
-
-    opacity: .95;
-
-    color:
-
-        rgba(
-            238,
-            234,
-            229,
-            .55
-        );
-
-    text-shadow:
-
-        0 0 18px
-        rgba(146,10,44,.38);
-
 }
 
 
@@ -3477,70 +3500,35 @@ footer p {
 /* ======================================== */
 
 .runa-suenos {
+    max-width: 620px;
 
     margin-top: 42px;
-
     padding-top: 27px;
 
-    max-width: 600px;
-
     border-top:
-
         1px solid
-        rgba(255,255,255,.035);
+        rgba(255,255,255,.07);
 
     color:
-
-        rgba(
-            238,
-            234,
-            229,
-            .22
-        );
+        rgba(238,234,229,.52);
 
     font-size:
-
         clamp(
-            .85rem,
-            1.5vw,
-            1.15rem
+            .88rem,
+            1.45vw,
+            1.14rem
         );
 
-    letter-spacing: 9px;
+    letter-spacing: 7px;
+    word-spacing: 12px;
+    line-height: 2;
 
-    line-height: 1.8;
-
-    opacity: .48;
-
+    opacity: .76;
 }
-
 
 .runa-suenos::before {
-
     content:
         "\000045\00004C\00004C\00004F\000053 \000054\000041\00004D\000042\000049\000045\00004E \000053\000055\000045\0000D1\000041\00004E";
-
-}
-
-
-.runa-suenos:hover {
-
-    opacity: .9;
-
-    color:
-
-        rgba(
-            238,
-            234,
-            229,
-            .50
-        );
-
-    text-shadow:
-
-        0 0 22px
-        rgba(146,10,44,.30);
-
 }
 
 
@@ -3550,9 +3538,7 @@ footer p {
 /* ======================================== */
 
 footer {
-
     flex-wrap: wrap;
-
 }
 
 
@@ -3562,75 +3548,69 @@ footer {
 /* ======================================== */
 
 .runa-final {
-
     width: 100%;
+    max-width: 1050px;
 
     text-align: center;
 
-    margin-top: 50px;
+    margin:
+        50px auto
+        0;
 
-    padding-top: 34px;
+    padding:
+        34px 20px
+        0;
 
     border-top:
-
         1px solid
-        rgba(255,255,255,.035);
+        rgba(255,255,255,.07);
 
     color:
-
-        rgba(
-            238,
-            234,
-            229,
-            .20
-        );
+        rgba(238,234,229,.50);
 
     font-size:
-
         clamp(
-            .80rem,
-            1.35vw,
+            .82rem,
+            1.3vw,
             1.08rem
         );
 
-    letter-spacing: 10px;
+    letter-spacing: 7px;
+    word-spacing: 13px;
+    line-height: 2.1;
 
-    line-height: 1.9;
-
-    opacity: .48;
-
+    opacity: .72;
 }
-
 
 .runa-final::before {
-
     content:
         "\000059\000041 \000045\000052\000045\000053 \000050\000041\000052\000054\000045 \000044\000045 \00004E\00004F\000053\00004F\000054\000052\00004F\000053";
-
 }
 
 
-.runa-final:hover {
+/* ======================================== */
+/* BRILLO AL DESCUBRIR LAS RUNAS */
+/* MOUSE + PULSACIÓN EN MÓVIL */
+/* ======================================== */
 
+.runa-portada:hover,
+.runa-portada:active,
+.runa-suenos:hover,
+.runa-suenos:active,
+.runa-final:hover,
+.runa-final:active {
     opacity: 1;
 
     color:
-
-        rgba(
-            238,
-            234,
-            229,
-            .58
-        );
+        rgba(255,248,246,.92);
 
     text-shadow:
+        0 0 5px rgba(255,255,255,.09),
+        0 0 14px rgba(146,10,44,.42),
+        0 0 30px rgba(146,10,44,.20);
 
-        0 0 8px
-        rgba(255,255,255,.04),
-
-        0 0 25px
-        rgba(146,10,44,.34);
-
+    transform:
+        translateY(-1px);
 }
 
 
@@ -3640,26 +3620,36 @@ footer {
 
 @media (max-width: 950px) {
 
-    .runa-portada {
-
-        letter-spacing: 6px;
-
+    html {
+        scroll-padding-top: 88px;
     }
 
+    #inicio,
+    #relatos,
+    #suenos,
+    #sinfonia,
+    #autor,
+    #comentarios {
+        scroll-margin-top: 88px;
+    }
+
+    .runa-portada {
+        max-width: 88%;
+        letter-spacing: 5px;
+        word-spacing: 9px;
+    }
 
     .runa-suenos {
-
-        letter-spacing: 7px;
-
+        max-width: 100%;
+        letter-spacing: 5px;
+        word-spacing: 9px;
     }
-
 
     .runa-final {
-
-        letter-spacing: 7px;
-
+        max-width: 92%;
+        letter-spacing: 5px;
+        word-spacing: 9px;
     }
-
 }
 
 
@@ -3669,54 +3659,83 @@ footer {
 
 @media (max-width: 720px) {
 
+    html {
+        scroll-padding-top: 82px;
+    }
+
+    #inicio,
+    #relatos,
+    #suenos,
+    #sinfonia,
+    #autor,
+    #comentarios {
+        scroll-margin-top: 82px;
+    }
+
+    /* Evita que el inicio de Sueños quede debajo del menú fijo */
+    .suenos {
+        padding-top: 112px;
+        padding-bottom: 95px;
+    }
+
+    .suenos-contenido {
+        width: 100%;
+        max-width: 100%;
+    }
+
     .runa-portada {
+        max-width: 94%;
 
-        max-width: 90%;
-
-        margin-bottom: 21px;
-
-        font-size: .67rem;
-
-        letter-spacing: 4px;
-
-        line-height: 1.7;
-
-    }
-
-
-    .runa-suenos {
-
-        margin-top: 32px;
-
-        padding-top: 23px;
-
-        font-size: .73rem;
-
-        letter-spacing: 5px;
-
-        line-height: 2;
-
-    }
-
-
-    .runa-final {
-
-        margin-top: 35px;
-
-        padding:
-
-            28px
-            10px
-            0;
+        margin-bottom: 22px;
 
         font-size: .68rem;
-
-        letter-spacing: 5px;
-
+        letter-spacing: 3.2px;
+        word-spacing: 7px;
         line-height: 2;
 
+        opacity: .82;
     }
 
+    .runa-suenos {
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 34px;
+        padding:
+            24px 2px
+            0;
+
+        text-align: left;
+
+        font-size: .72rem;
+        letter-spacing: 3px;
+        word-spacing: 7px;
+        line-height: 2.25;
+
+        opacity: .82;
+    }
+
+    .runa-final {
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 36px;
+
+        padding:
+            30px 8px
+            4px;
+
+        font-size: .70rem;
+        letter-spacing: 2.8px;
+        word-spacing: 7px;
+        line-height: 2.35;
+
+        opacity: .80;
+    }
+
+    footer {
+        overflow: visible;
+    }
 }
 
 
@@ -3727,31 +3746,28 @@ footer {
 @media (max-width: 420px) {
 
     .runa-portada {
-
-        max-width: 95%;
-
-        font-size: .60rem;
-
-        letter-spacing: 3px;
-
-    }
-
-
-    .runa-suenos {
-
-        font-size: .65rem;
-
-        letter-spacing: 4px;
-
-    }
-
-
-    .runa-final {
+        max-width: 98%;
 
         font-size: .62rem;
-
-        letter-spacing: 4px;
-
+        letter-spacing: 2.2px;
+        word-spacing: 5px;
+        line-height: 2.15;
     }
 
+    .runa-suenos {
+        font-size: .66rem;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+        line-height: 2.35;
+    }
+
+    .runa-final {
+        padding-left: 2px;
+        padding-right: 2px;
+
+        font-size: .64rem;
+        letter-spacing: 1.8px;
+        word-spacing: 5px;
+        line-height: 2.45;
+    }
 }
