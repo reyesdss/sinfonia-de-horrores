@@ -1,8 +1,3 @@
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,7 +8,7 @@
                maximum-scale=1.0,
                user-scalable=no,
                viewport-fit=cover">
-<title>Sinfonía de Horrores | Historia promocional</title>
+<title>Sinfonía de Horrores | Promoción</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,13 +16,16 @@
 
 <style>
 :root {
-    --negro: #050506;
-    --negro2: #09090b;
-    --blanco: #eeeae5;
-    --gris: #948c88;
-    --gris2: #625c59;
-    --rojo: #920a2c;
-    --rojoClaro: #c31540;
+    --blanco: #f4f1ee;
+    --gris: #a99fa1;
+    --gris2: #756d72;
+    --vino: #920a2c;
+    --vino2: #c31540;
+    --magenta: #8b245f;
+    --morado: #4b285f;
+    --azul: #223866;
+    --azul2: #18253f;
+    --negro: #050507;
     --cinzel: "Cinzel", serif;
     --literaria: "Cormorant Garamond", serif;
     --texto: "Inter", sans-serif;
@@ -72,97 +70,106 @@ body {
     transform-origin: center center;
     user-select: none;
     -webkit-user-select: none;
+
+    /* Base oscura + acentos inspirados en Instagram/Facebook,
+       pero conservando la identidad vino de Sinfonía de Horrores. */
     background:
-        radial-gradient(circle at 50% 18%, rgba(146,10,44,.25), transparent 28%),
-        radial-gradient(circle at 8% 70%, rgba(146,10,44,.08), transparent 26%),
-        radial-gradient(circle at 95% 68%, rgba(146,10,44,.07), transparent 24%),
-        linear-gradient(180deg, #050506 0%, #090709 48%, #040405 100%);
+        radial-gradient(circle at 20% 12%, rgba(139,36,95,.30), transparent 30%),
+        radial-gradient(circle at 82% 16%, rgba(34,56,102,.28), transparent 28%),
+        radial-gradient(circle at 50% 46%, rgba(146,10,44,.24), transparent 34%),
+        radial-gradient(circle at 8% 77%, rgba(75,40,95,.16), transparent 28%),
+        radial-gradient(circle at 94% 78%, rgba(34,56,102,.14), transparent 27%),
+        linear-gradient(180deg, #07060a 0%, #100811 38%, #08090f 67%, #040406 100%);
 }
 
 .story::before {
     content: "";
     position: absolute;
     inset: 0;
-    opacity: .14;
     pointer-events: none;
-    background-image:
-        repeating-linear-gradient(
-            0deg,
-            transparent 0,
-            transparent 3px,
-            rgba(255,255,255,.012) 4px
-        );
+    opacity: .17;
+    background:
+        linear-gradient(120deg, transparent 0 45%, rgba(255,255,255,.018) 49%, transparent 53%),
+        repeating-linear-gradient(0deg, transparent 0, transparent 4px, rgba(255,255,255,.01) 5px);
 }
 
 .story::after {
     content: "";
     position: absolute;
     inset: 28px;
-    border: 1px solid rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.055);
     pointer-events: none;
 }
 
-.luz-central {
+/* ============================= */
+/* ATMÓSFERA */
+/* ============================= */
+
+.halo-rosa,
+.halo-azul,
+.halo-vino {
     position: absolute;
+    border-radius: 50%;
+    filter: blur(95px);
+    pointer-events: none;
+}
+
+.halo-rosa {
+    width: 520px;
+    height: 520px;
+    top: -170px;
+    left: -120px;
+    background: rgba(195,21,64,.11);
+}
+
+.halo-azul {
+    width: 580px;
+    height: 580px;
+    top: 120px;
+    right: -220px;
+    background: rgba(50,78,150,.10);
+}
+
+.halo-vino {
     width: 760px;
     height: 760px;
-    top: 170px;
-    left: 160px;
-    border-radius: 50%;
-    filter: blur(55px);
-    background: radial-gradient(circle, rgba(146,10,44,.14), transparent 67%);
-}
-
-.halo-izquierda {
-    position: absolute;
-    width: 500px;
-    height: 600px;
-    left: -260px;
-    bottom: 250px;
-    border-radius: 50%;
-    filter: blur(90px);
-    background: rgba(146,10,44,.055);
-}
-
-.halo-derecha {
-    position: absolute;
-    width: 500px;
-    height: 600px;
-    right: -260px;
-    bottom: 180px;
-    border-radius: 50%;
-    filter: blur(90px);
-    background: rgba(146,10,44,.045);
+    top: 470px;
+    left: 150px;
+    background: rgba(146,10,44,.09);
 }
 
 .linea-superior {
     position: absolute;
-    top: 92px;
-    left: 90px;
-    right: 90px;
+    top: 72px;
+    left: 85px;
+    right: 85px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(146,10,44,.75), transparent);
+    background: linear-gradient(90deg, transparent, rgba(195,21,64,.80), rgba(74,93,169,.52), transparent);
 }
+
+/* ============================= */
+/* CABECERA */
+/* ============================= */
 
 .header {
     position: relative;
     z-index: 5;
-    padding-top: 108px;
     text-align: center;
+    padding-top: 82px;
 }
 
 .logo-wrap {
     position: relative;
-    width: 118px;
-    margin: 0 auto 26px;
+    width: 185px;
+    margin: 0 auto 20px;
 }
 
 .logo-wrap::before {
     content: "";
     position: absolute;
-    inset: -40px;
+    inset: -68px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(146,10,44,.18), transparent 68%);
+    background: radial-gradient(circle, rgba(195,21,64,.24), rgba(73,44,105,.11) 42%, transparent 70%);
     filter: blur(18px);
 }
 
@@ -171,23 +178,27 @@ body {
     display: block;
     width: 100%;
     height: auto;
-    opacity: .92;
-    filter: drop-shadow(0 0 22px rgba(146,10,44,.28));
+    opacity: 1;
+    filter:
+        brightness(1.35)
+        contrast(1.08)
+        drop-shadow(0 0 12px rgba(255,255,255,.14))
+        drop-shadow(0 0 38px rgba(195,21,64,.38));
 }
 
 .micro {
-    color: #766e6a;
+    color: #a3979a;
     font-size: 13px;
     letter-spacing: 7px;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .header h1 {
     font-family: var(--cinzel);
-    font-size: 76px;
-    line-height: .95;
+    font-size: 68px;
+    line-height: .94;
     font-weight: 500;
-    letter-spacing: 9px;
+    letter-spacing: 8px;
     text-transform: uppercase;
     text-shadow: 0 12px 50px rgba(0,0,0,.75);
 }
@@ -195,162 +206,236 @@ body {
 .header h1 span { display: block; }
 
 .header h1 .de {
-    margin: 14px 0;
+    margin: 12px 0;
     font-family: var(--literaria);
-    font-size: 29px;
+    font-size: 27px;
     font-weight: 400;
     font-style: italic;
     letter-spacing: 10px;
     text-transform: lowercase;
-    color: #8d8581;
+    color: #aaa0a2;
 }
 
 .ornamento {
-    margin-top: 26px;
+    margin-top: 22px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 17px;
+    gap: 16px;
 }
 
 .ornamento span {
-    width: 92px;
+    width: 90px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, var(--rojo));
+    background: linear-gradient(90deg, transparent, var(--vino2));
 }
 
 .ornamento span:last-child {
-    background: linear-gradient(90deg, var(--rojo), transparent);
+    background: linear-gradient(90deg, var(--azul), transparent);
 }
 
 .ornamento b {
-    color: var(--rojo);
-    font-size: 12px;
+    color: #d24a71;
+    font-size: 11px;
 }
 
 .runa-frase {
-    margin-top: 22px;
+    margin-top: 19px;
     font-family: "Runas", sans-serif;
-    font-size: 19px;
-    letter-spacing: 11px;
-    color: rgba(238,234,229,.44);
-    text-shadow: 0 0 16px rgba(146,10,44,.18);
+    font-size: 20px;
+    letter-spacing: 10px;
+    color: rgba(244,241,238,.64);
+    text-shadow: 0 0 20px rgba(195,21,64,.30);
 }
+
+/* ============================= */
+/* MENSAJE BREVE */
+/* ============================= */
 
 .mensaje-personal {
     position: relative;
     z-index: 5;
-    width: 830px;
-    margin: 34px auto 0;
+    width: 850px;
+    margin: 28px auto 0;
     text-align: center;
 }
 
 .mensaje-personal .sobre {
-    color: #77706c;
+    color: #9a8f92;
     font-size: 12px;
     letter-spacing: 5px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .mensaje-personal p {
     font-family: var(--literaria);
-    color: #b1a8a4;
-    font-size: 31px;
-    line-height: 1.28;
+    color: #c1b7b7;
+    font-size: 30px;
+    line-height: 1.25;
 }
 
 .mensaje-personal strong {
-    color: #f1ece8;
+    color: #fff;
     font-weight: 500;
 }
+
+/* ============================= */
+/* LIBROS — PROTAGONISTAS */
+/* ============================= */
 
 .libros {
     position: relative;
     z-index: 5;
-    width: 930px;
-    margin: 48px auto 0;
+    width: 960px;
+    margin: 34px auto 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 38px;
+    gap: 32px;
 }
 
 .libro { min-width: 0; }
 
 .marco {
     position: relative;
-    padding: 13px;
-    background: #080809;
-    border: 1px solid rgba(255,255,255,.085);
-    box-shadow: 0 42px 90px rgba(0,0,0,.67), 0 0 55px rgba(146,10,44,.055);
+    padding: 10px;
+    border-radius: 4px;
+    background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.018));
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow:
+        0 42px 95px rgba(0,0,0,.72),
+        0 0 48px rgba(146,10,44,.12),
+        0 0 70px rgba(42,63,123,.05);
 }
 
 .marco::before {
     content: "";
     position: absolute;
     inset: -1px;
-    border: 1px solid rgba(146,10,44,.17);
     pointer-events: none;
+    border-radius: 4px;
+    background: linear-gradient(135deg, rgba(195,21,64,.30), transparent 32%, transparent 68%, rgba(47,72,140,.25));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    padding: 1px;
 }
 
 .marco img {
     display: block;
     width: 100%;
-    height: 600px;
-    object-fit: cover;
+    height: 650px;
+    object-fit: contain;
+    object-position: center;
+    background: #030304;
 }
 
 .estado {
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 22px;
+    left: 22px;
     padding: 10px 15px;
-    color: #dfd0d3;
-    background: rgba(7,7,8,.86);
-    border: 1px solid rgba(146,10,44,.45);
+    color: #f2e7e9;
+    background: rgba(5,5,8,.88);
+    border: 1px solid rgba(195,21,64,.52);
     font-size: 11px;
     letter-spacing: 3px;
+    backdrop-filter: blur(8px);
 }
 
 .info {
-    padding-top: 20px;
+    padding-top: 17px;
     text-align: center;
 }
 
 .info small {
-    color: #6d6662;
-    font-size: 11px;
+    color: #82777b;
+    font-size: 10px;
     letter-spacing: 4px;
 }
 
 .info h2 {
-    margin-top: 9px;
+    margin-top: 7px;
     font-family: var(--cinzel);
-    font-size: 32px;
+    font-size: 31px;
     font-weight: 500;
     letter-spacing: 3px;
-    color: #ebe5e1;
+    color: #f2ece8;
 }
 
-.info p {
-    margin-top: 10px;
-    color: #827a76;
-    font-family: var(--literaria);
-    font-size: 18px;
-}
+/* ============================= */
+/* CTA — MÁS ARRIBA Y MUY VISIBLE */
+/* ============================= */
 
-.cta-wrap {
+.cta {
     position: relative;
-    z-index: 5;
-    width: 840px;
-    margin: 44px auto 0;
+    z-index: 6;
+    width: 860px;
+    margin: 30px auto 0;
     text-align: center;
 }
 
+.cta small {
+    color: #9c9295;
+    font-size: 11px;
+    letter-spacing: 5px;
+}
+
+.cta h3 {
+    margin-top: 9px;
+    font-family: var(--cinzel);
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    color: #f1ece9;
+}
+
+.sticker-slot {
+    position: relative;
+    width: 660px;
+    height: 102px;
+    margin: 20px auto 0;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 2px solid rgba(255,255,255,.96);
+    box-shadow:
+        0 18px 55px rgba(0,0,0,.48),
+        0 0 0 1px rgba(195,21,64,.22),
+        0 0 38px rgba(195,21,64,.15);
+}
+
+.sticker-slot::before,
+.sticker-slot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 42px;
+    height: 1px;
+}
+
+.sticker-slot::before {
+    left: -42px;
+    background: linear-gradient(90deg, transparent, var(--vino2));
+}
+
+.sticker-slot::after {
+    right: -42px;
+    background: linear-gradient(90deg, var(--azul), transparent);
+}
+
+/* ============================= */
+/* CIERRE */
+/* ============================= */
+
 .lema {
+    position: relative;
+    z-index: 5;
+    width: 820px;
+    margin: 26px auto 0;
+    text-align: center;
     font-family: var(--literaria);
-    font-size: 34px;
-    line-height: 1.16;
-    color: #c7bfbb;
+    font-size: 30px;
+    line-height: 1.15;
+    color: #c6bcbd;
 }
 
 .lema strong {
@@ -358,106 +443,52 @@ body {
     font-weight: 500;
 }
 
-.enlace-texto {
-    margin-top: 28px;
-    text-align: center;
-}
-
-.enlace-texto small {
-    color: #7a726e;
-    font-size: 11px;
-    letter-spacing: 5px;
-}
-
-.enlace-texto h3 {
-    margin-top: 10px;
-    font-family: var(--cinzel);
-    font-size: 26px;
-    font-weight: 500;
-    letter-spacing: 4px;
-    color: #ddd6d2;
-}
-
-.sticker-slot {
-    position: relative;
-    z-index: 5;
-    width: 670px;
-    height: 96px;
-    margin: 24px auto 0;
-    border: 1px solid rgba(146,10,44,.58);
-    background: linear-gradient(90deg, rgba(146,10,44,.02), rgba(146,10,44,.08), rgba(146,10,44,.02));
-    box-shadow: inset 0 0 30px rgba(146,10,44,.035), 0 15px 40px rgba(0,0,0,.25);
-}
-
-.sticker-slot::before,
-.sticker-slot::after {
-    content: "";
-    position: absolute;
-    width: 32px;
-    height: 1px;
-    top: 50%;
-    background: var(--rojo);
-}
-
-.sticker-slot::before { left: -16px; }
-.sticker-slot::after { right: -16px; }
-
-.sticker-slot .sticker-texto {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #766d69;
-    font-size: 11px;
-    letter-spacing: 4px;
-}
-
 .footer {
     position: absolute;
     z-index: 5;
     left: 0;
     right: 0;
-    bottom: 62px;
+    bottom: 48px;
     text-align: center;
 }
 
 .autor {
     font-family: var(--cinzel);
-    color: #bdb5b0;
-    font-size: 15px;
+    color: #c1b8b7;
+    font-size: 14px;
     letter-spacing: 6px;
 }
 
 .instagram {
-    margin-top: 10px;
-    color: #655d5a;
-    font-size: 12px;
+    margin-top: 8px;
+    color: #81777b;
+    font-size: 11px;
     letter-spacing: 4px;
 }
 
 .generos {
-    margin-top: 22px;
+    margin-top: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 21px;
-    color: #766e6a;
+    gap: 20px;
+    color: #8f8588;
     font-family: var(--literaria);
-    font-size: 19px;
+    font-size: 18px;
 }
 
-.generos span { color: var(--rojo); }
+.generos span:first-of-type { color: #d64f79; }
+.generos span:last-of-type { color: #556fb1; }
 
 ::-webkit-scrollbar { display: none; }
 </style>
 </head>
 <body>
+
 <div class="story" id="story">
-    <div class="luz-central"></div>
-    <div class="halo-izquierda"></div>
-    <div class="halo-derecha"></div>
+    <div class="halo-rosa"></div>
+    <div class="halo-azul"></div>
+    <div class="halo-vino"></div>
     <div class="linea-superior"></div>
 
     <header class="header">
@@ -483,11 +514,9 @@ body {
     </header>
 
     <section class="mensaje-personal">
-        <p class="sobre">SI TE DA CURIOSIDAD LEER LO QUE ESCRIBO</p>
+        <p class="sobre">DOS RELATOS DISPONIBLES PARA LEER</p>
         <p>
-            Aquí puedes encontrar <strong>dos de mis relatos</strong>.
-            <br>
-            Si entras… tal vez <strong>ya no salgas igual</strong>.
+            Dos historias. Dos puertas hacia <strong>lo desconocido</strong>.
         </p>
     </section>
 
@@ -500,7 +529,6 @@ body {
             <div class="info">
                 <small>RELATO</small>
                 <h2>La Cueva</h2>
-                <p>Un descenso hacia lo que no debía ser encontrado.</p>
             </div>
         </article>
 
@@ -512,26 +540,20 @@ body {
             <div class="info">
                 <small>RELATO</small>
                 <h2>Cielo Rojo</h2>
-                <p>Cuando el cielo cambia, también cambia lo que nos mira.</p>
             </div>
         </article>
     </section>
 
-    <section class="cta-wrap">
-        <div class="lema">
-            Cada relato es una nota.
-            <br>
-            <strong>El horror es la melodía.</strong>
-        </div>
+    <section class="cta">
+        <small>TOCA EL ENLACE</small>
+        <h3>ENTRA A SINFONÍA DE HORRORES</h3>
+        <div class="sticker-slot"></div>
+    </section>
 
-        <section class="enlace-texto">
-            <small>TOCA EL ENLACE EN MI HISTORIA</small>
-            <h3>ENTRA A SINFONÍA DE HORRORES</h3>
-        </section>
-
-        <div class="sticker-slot">
-            <div class="sticker-texto">AQUÍ COLOCA EL STICKER DE ENLACE DE INSTAGRAM</div>
-        </div>
+    <section class="lema">
+        Cada relato es una nota.
+        <br>
+        <strong>El horror es la melodía.</strong>
     </section>
 
     <footer class="footer">
@@ -579,9 +601,11 @@ window.addEventListener("resize", ajustarHistoria);
 window.addEventListener("orientationchange", () => {
     setTimeout(ajustarHistoria, 150);
 });
+
 if (window.visualViewport) {
     window.visualViewport.addEventListener("resize", ajustarHistoria);
 }
 </script>
+
 </body>
 </html>
