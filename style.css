@@ -3363,3 +3363,405 @@ footer p {
     }
 
 }
+
+
+/* ======================================== */
+/* TIPOGRAFÍA RÚNICA */
+/* ======================================== */
+
+@font-face {
+
+    font-family: "SinfoniaRunica";
+
+    src:
+        url("SinfoniaRunica.ttf")
+        format("truetype");
+
+    font-weight: normal;
+    font-style: normal;
+
+    font-display: swap;
+
+}
+
+
+/* ======================================== */
+/* BASE DE LOS MENSAJES RÚNICOS */
+/* ======================================== */
+
+.mensaje-runa {
+
+    font-family:
+        "SinfoniaRunica",
+        sans-serif;
+
+    font-weight: normal;
+
+    text-transform: uppercase;
+
+    user-select: none;
+
+    cursor: default;
+
+    transition:
+
+        opacity .6s ease,
+        color .6s ease,
+        text-shadow .6s ease;
+
+}
+
+
+/* ======================================== */
+/* MENSAJE I — PORTADA */
+/* SIGUE ESCUCHANDO */
+/* ======================================== */
+
+.runa-portada {
+
+    margin:
+
+        0 auto
+        25px;
+
+    min-height: 22px;
+
+    color:
+
+        rgba(
+            238,
+            234,
+            229,
+            .28
+        );
+
+    font-size:
+
+        clamp(
+            .72rem,
+            1.15vw,
+            .95rem
+        );
+
+    letter-spacing: 8px;
+
+    line-height: 1.5;
+
+    opacity: .55;
+
+}
+
+
+.runa-portada::before {
+
+    content:
+        "\000053\000049\000047\000055\000045 \000045\000053\000043\000055\000043\000048\000041\00004E\000044\00004F";
+
+}
+
+
+.runa-portada:hover {
+
+    opacity: .95;
+
+    color:
+
+        rgba(
+            238,
+            234,
+            229,
+            .55
+        );
+
+    text-shadow:
+
+        0 0 18px
+        rgba(146,10,44,.38);
+
+}
+
+
+/* ======================================== */
+/* MENSAJE II — SUEÑOS */
+/* ELLOS TAMBIEN SUEÑAN */
+/* ======================================== */
+
+.runa-suenos {
+
+    margin-top: 42px;
+
+    padding-top: 27px;
+
+    max-width: 600px;
+
+    border-top:
+
+        1px solid
+        rgba(255,255,255,.035);
+
+    color:
+
+        rgba(
+            238,
+            234,
+            229,
+            .22
+        );
+
+    font-size:
+
+        clamp(
+            .85rem,
+            1.5vw,
+            1.15rem
+        );
+
+    letter-spacing: 9px;
+
+    line-height: 1.8;
+
+    opacity: .48;
+
+}
+
+
+.runa-suenos::before {
+
+    content:
+        "\000045\00004C\00004C\00004F\000053 \000054\000041\00004D\000042\000049\000045\00004E \000053\000055\000045\0000D1\000041\00004E";
+
+}
+
+
+.runa-suenos:hover {
+
+    opacity: .9;
+
+    color:
+
+        rgba(
+            238,
+            234,
+            229,
+            .50
+        );
+
+    text-shadow:
+
+        0 0 22px
+        rgba(146,10,44,.30);
+
+}
+
+
+/* ======================================== */
+/* FOOTER */
+/* AJUSTE PARA MENSAJE FINAL */
+/* ======================================== */
+
+footer {
+
+    flex-wrap: wrap;
+
+}
+
+
+/* ======================================== */
+/* MENSAJE III — FINAL */
+/* YA ERES PARTE DE NOSOTROS */
+/* ======================================== */
+
+.runa-final {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-top: 50px;
+
+    padding-top: 34px;
+
+    border-top:
+
+        1px solid
+        rgba(255,255,255,.035);
+
+    color:
+
+        rgba(
+            238,
+            234,
+            229,
+            .20
+        );
+
+    font-size:
+
+        clamp(
+            .80rem,
+            1.35vw,
+            1.08rem
+        );
+
+    letter-spacing: 10px;
+
+    line-height: 1.9;
+
+    opacity: .48;
+
+}
+
+
+.runa-final::before {
+
+    content:
+        "\000059\000041 \000045\000052\000045\000053 \000050\000041\000052\000054\000045 \000044\000045 \00004E\00004F\000053\00004F\000054\000052\00004F\000053";
+
+}
+
+
+.runa-final:hover {
+
+    opacity: 1;
+
+    color:
+
+        rgba(
+            238,
+            234,
+            229,
+            .58
+        );
+
+    text-shadow:
+
+        0 0 8px
+        rgba(255,255,255,.04),
+
+        0 0 25px
+        rgba(146,10,44,.34);
+
+}
+
+
+/* ======================================== */
+/* TABLET */
+/* ======================================== */
+
+@media (max-width: 950px) {
+
+    .runa-portada {
+
+        letter-spacing: 6px;
+
+    }
+
+
+    .runa-suenos {
+
+        letter-spacing: 7px;
+
+    }
+
+
+    .runa-final {
+
+        letter-spacing: 7px;
+
+    }
+
+}
+
+
+/* ======================================== */
+/* CELULAR */
+/* ======================================== */
+
+@media (max-width: 720px) {
+
+    .runa-portada {
+
+        max-width: 90%;
+
+        margin-bottom: 21px;
+
+        font-size: .67rem;
+
+        letter-spacing: 4px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .runa-suenos {
+
+        margin-top: 32px;
+
+        padding-top: 23px;
+
+        font-size: .73rem;
+
+        letter-spacing: 5px;
+
+        line-height: 2;
+
+    }
+
+
+    .runa-final {
+
+        margin-top: 35px;
+
+        padding:
+
+            28px
+            10px
+            0;
+
+        font-size: .68rem;
+
+        letter-spacing: 5px;
+
+        line-height: 2;
+
+    }
+
+}
+
+
+/* ======================================== */
+/* CELULARES PEQUEÑOS */
+/* ======================================== */
+
+@media (max-width: 420px) {
+
+    .runa-portada {
+
+        max-width: 95%;
+
+        font-size: .60rem;
+
+        letter-spacing: 3px;
+
+    }
+
+
+    .runa-suenos {
+
+        font-size: .65rem;
+
+        letter-spacing: 4px;
+
+    }
+
+
+    .runa-final {
+
+        font-size: .62rem;
+
+        letter-spacing: 4px;
+
+    }
+
+}
