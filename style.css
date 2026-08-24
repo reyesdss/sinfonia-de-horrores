@@ -3364,25 +3364,18 @@ footer p {
 
 }
 
-
 /* ======================================== */
 /* TIPOGRAFÍA RÚNICA */
 /* ======================================== */
 
 @font-face {
-
-    font-family: "SinfoniaRunica";
-
-    src:
-        url("SinfoniaRunica.ttf")
-        format("truetype");
-
+    font-family: "Runas";
+    src: url("./runas.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-
-    font-display: swap;
-
+    font-display: block;
 }
+
 
 
 /* ======================================== */
@@ -3391,24 +3384,21 @@ footer p {
 
 .mensaje-runa {
 
-    font-family:
-        "SinfoniaRunica",
-        sans-serif;
+    font-family: "Runas" !important;
 
     font-weight: normal;
+    font-style: normal;
 
-    text-transform: uppercase;
+    text-transform: none;
 
     user-select: none;
 
     cursor: default;
 
     transition:
-
         opacity .6s ease,
         color .6s ease,
         text-shadow .6s ease;
-
 }
 
 
