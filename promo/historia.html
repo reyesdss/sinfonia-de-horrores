@@ -1,57 +1,45 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport"
       content="width=device-width,
                initial-scale=1.0,
                maximum-scale=1.0,
                user-scalable=no,
                viewport-fit=cover">
-
-<title>Sinfonía de Horrores | Guillermo Reyes</title>
+<title>Sinfonía de Horrores | Historia promocional</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin>
-
-<link
-    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
-/* ============================================= */
-/* COLORES */
-/* ============================================= */
-
 :root {
-
     --negro: #050506;
     --negro2: #09090b;
-
     --blanco: #eeeae5;
-
     --gris: #948c88;
     --gris2: #625c59;
-
     --rojo: #920a2c;
     --rojoClaro: #c31540;
-
     --cinzel: "Cinzel", serif;
     --literaria: "Cormorant Garamond", serif;
     --texto: "Inter", sans-serif;
 }
 
-
-/* ============================================= */
-/* GENERAL */
-/* ============================================= */
+@font-face {
+    font-family: "Runas";
+    src: url("../runas.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
 
 * {
     margin: 0;
@@ -59,95 +47,45 @@
     box-sizing: border-box;
 }
 
-
 html,
 body {
     width: 100%;
     height: 100%;
 }
 
-
 body {
-
     background: #000;
-
     overflow: hidden;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-family: var(--texto);
 }
 
-
-/* ============================================= */
-/* HISTORIA 1080 x 1920 */
-/* ============================================= */
-
 .story {
-
     width: 1080px;
     height: 1920px;
-
     flex: none;
-
     position: relative;
-
     overflow: hidden;
-
     color: var(--blanco);
-
     transform-origin: center center;
-
     user-select: none;
     -webkit-user-select: none;
-
     background:
-
-        radial-gradient(
-            circle at 50% 30%,
-            rgba(146,10,44,.20),
-            transparent 34%
-        ),
-
-        radial-gradient(
-            circle at 10% 70%,
-            rgba(146,10,44,.07),
-            transparent 28%
-        ),
-
-        radial-gradient(
-            circle at 92% 70%,
-            rgba(146,10,44,.06),
-            transparent 27%
-        ),
-
-        linear-gradient(
-            180deg,
-            #050506 0%,
-            #090709 48%,
-            #040405 100%
-        );
+        radial-gradient(circle at 50% 18%, rgba(146,10,44,.25), transparent 28%),
+        radial-gradient(circle at 8% 70%, rgba(146,10,44,.08), transparent 26%),
+        radial-gradient(circle at 95% 68%, rgba(146,10,44,.07), transparent 24%),
+        linear-gradient(180deg, #050506 0%, #090709 48%, #040405 100%);
 }
 
-
-/* textura */
-
 .story::before {
-
     content: "";
-
     position: absolute;
-
     inset: 0;
-
-    opacity: .16;
-
+    opacity: .14;
     pointer-events: none;
-
     background-image:
-
         repeating-linear-gradient(
             0deg,
             transparent 0,
@@ -156,1096 +94,494 @@ body {
         );
 }
 
-
-/* marco exterior */
-
 .story::after {
-
     content: "";
-
     position: absolute;
-
     inset: 28px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.04);
-
+    border: 1px solid rgba(255,255,255,.04);
     pointer-events: none;
 }
 
-
-/* ============================================= */
-/* ATMÓSFERA */
-/* ============================================= */
-
 .luz-central {
-
     position: absolute;
-
     width: 760px;
     height: 760px;
-
-    top: 250px;
+    top: 170px;
     left: 160px;
-
     border-radius: 50%;
-
     filter: blur(55px);
-
-    background:
-
-        radial-gradient(
-            circle,
-            rgba(146,10,44,.14),
-            transparent 67%
-        );
+    background: radial-gradient(circle, rgba(146,10,44,.14), transparent 67%);
 }
-
 
 .halo-izquierda {
-
     position: absolute;
-
     width: 500px;
     height: 600px;
-
     left: -260px;
     bottom: 250px;
-
     border-radius: 50%;
-
     filter: blur(90px);
-
-    background:
-        rgba(146,10,44,.055);
+    background: rgba(146,10,44,.055);
 }
-
 
 .halo-derecha {
-
     position: absolute;
-
     width: 500px;
     height: 600px;
-
     right: -260px;
     bottom: 180px;
-
     border-radius: 50%;
-
     filter: blur(90px);
-
-    background:
-        rgba(146,10,44,.045);
+    background: rgba(146,10,44,.045);
 }
-
 
 .linea-superior {
-
     position: absolute;
-
     top: 92px;
-
     left: 90px;
     right: 90px;
-
     height: 1px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(146,10,44,.75),
-            transparent
-        );
+    background: linear-gradient(90deg, transparent, rgba(146,10,44,.75), transparent);
 }
 
-
-/* ============================================= */
-/* ENCABEZADO */
-/* ============================================= */
-
 .header {
-
     position: relative;
-
     z-index: 5;
-
-    padding-top: 125px;
-
+    padding-top: 108px;
     text-align: center;
 }
 
+.logo-wrap {
+    position: relative;
+    width: 118px;
+    margin: 0 auto 26px;
+}
+
+.logo-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(146,10,44,.18), transparent 68%);
+    filter: blur(18px);
+}
+
+.logo-wrap img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: .92;
+    filter: drop-shadow(0 0 22px rgba(146,10,44,.28));
+}
 
 .micro {
-
-    color: #716967;
-
+    color: #766e6a;
     font-size: 13px;
-
     letter-spacing: 7px;
-
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
-
 
 .header h1 {
-
     font-family: var(--cinzel);
-
-    font-size: 72px;
-
+    font-size: 76px;
     line-height: .95;
-
     font-weight: 500;
-
     letter-spacing: 9px;
-
     text-transform: uppercase;
-
-    text-shadow:
-        0 12px 50px rgba(0,0,0,.75);
+    text-shadow: 0 12px 50px rgba(0,0,0,.75);
 }
 
-
-.header h1 span {
-    display: block;
-}
-
+.header h1 span { display: block; }
 
 .header h1 .de {
-
     margin: 14px 0;
-
     font-family: var(--literaria);
-
     font-size: 29px;
-
     font-weight: 400;
-
     font-style: italic;
-
     letter-spacing: 10px;
-
     text-transform: lowercase;
-
     color: #8d8581;
 }
 
-
-/* ============================================= */
-/* ORNAMENTO */
-/* ============================================= */
-
 .ornamento {
-
-    margin-top: 28px;
-
+    margin-top: 26px;
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     gap: 17px;
 }
 
-
 .ornamento span {
-
     width: 92px;
     height: 1px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--rojo)
-        );
+    background: linear-gradient(90deg, transparent, var(--rojo));
 }
-
 
 .ornamento span:last-child {
-
-    background:
-
-        linear-gradient(
-            90deg,
-            var(--rojo),
-            transparent
-        );
+    background: linear-gradient(90deg, var(--rojo), transparent);
 }
 
-
 .ornamento b {
-
     color: var(--rojo);
-
     font-size: 12px;
 }
 
-
-/* ============================================= */
-/* MENSAJE PERSONAL */
-/* ============================================= */
+.runa-frase {
+    margin-top: 22px;
+    font-family: "Runas", sans-serif;
+    font-size: 19px;
+    letter-spacing: 11px;
+    color: rgba(238,234,229,.44);
+    text-shadow: 0 0 16px rgba(146,10,44,.18);
+}
 
 .mensaje-personal {
-
     position: relative;
-
     z-index: 5;
-
-    width: 820px;
-
-    margin: 38px auto 0;
-
+    width: 830px;
+    margin: 34px auto 0;
     text-align: center;
 }
 
-
 .mensaje-personal .sobre {
-
     color: #77706c;
-
-    font-family: var(--texto);
-
     font-size: 12px;
-
     letter-spacing: 5px;
-
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
-
 
 .mensaje-personal p {
-
     font-family: var(--literaria);
-
-    color: #aaa19d;
-
-    font-size: 29px;
-
-    line-height: 1.35;
+    color: #b1a8a4;
+    font-size: 31px;
+    line-height: 1.28;
 }
 
-
 .mensaje-personal strong {
-
     color: #f1ece8;
-
     font-weight: 500;
 }
 
-
-/* ============================================= */
-/* PORTADAS */
-/* ============================================= */
-
 .libros {
-
     position: relative;
-
     z-index: 5;
-
-    width: 880px;
-
-    margin: 52px auto 0;
-
+    width: 930px;
+    margin: 48px auto 0;
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 44px;
+    grid-template-columns: 1fr 1fr;
+    gap: 38px;
 }
 
-
-.libro {
-    min-width: 0;
-}
-
+.libro { min-width: 0; }
 
 .marco {
-
     position: relative;
-
-    padding: 12px;
-
+    padding: 13px;
     background: #080809;
-
-    border:
-        1px solid
-        rgba(255,255,255,.085);
-
-    box-shadow:
-
-        0 42px 90px
-        rgba(0,0,0,.67),
-
-        0 0 55px
-        rgba(146,10,44,.055);
+    border: 1px solid rgba(255,255,255,.085);
+    box-shadow: 0 42px 90px rgba(0,0,0,.67), 0 0 55px rgba(146,10,44,.055);
 }
 
-
 .marco::before {
-
     content: "";
-
     position: absolute;
-
     inset: -1px;
-
-    border:
-        1px solid
-        rgba(146,10,44,.17);
-
+    border: 1px solid rgba(146,10,44,.17);
     pointer-events: none;
 }
 
-
 .marco img {
-
     display: block;
-
     width: 100%;
-    height: 545px;
-
+    height: 600px;
     object-fit: cover;
 }
 
-
-/* disponible */
-
 .estado {
-
     position: absolute;
-
     top: 25px;
     left: 25px;
-
-    padding:
-        10px 15px;
-
+    padding: 10px 15px;
     color: #dfd0d3;
-
-    background:
-        rgba(7,7,8,.86);
-
-    border:
-        1px solid
-        rgba(146,10,44,.45);
-
+    background: rgba(7,7,8,.86);
+    border: 1px solid rgba(146,10,44,.45);
     font-size: 11px;
-
     letter-spacing: 3px;
 }
 
-
-/* información */
-
 .info {
-
-    padding-top: 22px;
-
+    padding-top: 20px;
     text-align: center;
 }
 
-
 .info small {
-
-    color: #69615e;
-
+    color: #6d6662;
     font-size: 11px;
-
     letter-spacing: 4px;
 }
 
-
 .info h2 {
-
     margin-top: 9px;
-
     font-family: var(--cinzel);
-
-    font-size: 30px;
-
+    font-size: 32px;
     font-weight: 500;
-
     letter-spacing: 3px;
-
     color: #ebe5e1;
 }
 
+.info p {
+    margin-top: 10px;
+    color: #827a76;
+    font-family: var(--literaria);
+    font-size: 18px;
+}
 
-/* ============================================= */
-/* LEMA */
-/* ============================================= */
-
-.lema {
-
+.cta-wrap {
     position: relative;
-
     z-index: 5;
-
-    width: 820px;
-
-    margin: 48px auto 0;
-
+    width: 840px;
+    margin: 44px auto 0;
     text-align: center;
 }
 
-
-.lema::before {
-
-    content: "";
-
-    display: block;
-
-    width: 72px;
-    height: 1px;
-
-    margin:
-        0 auto
-        24px;
-
-    background: var(--rojo);
-}
-
-
-.lema p {
-
+.lema {
     font-family: var(--literaria);
-
-    font-size: 35px;
-
-    line-height: 1.18;
-
+    font-size: 34px;
+    line-height: 1.16;
     color: #c7bfbb;
 }
 
-
 .lema strong {
-
     color: white;
-
     font-weight: 500;
 }
 
-
-/* ============================================= */
-/* TEXTO ANTES DEL STICKER */
-/* ============================================= */
-
 .enlace-texto {
-
-    position: relative;
-
-    z-index: 5;
-
-    margin-top: 37px;
-
+    margin-top: 28px;
     text-align: center;
 }
 
-
 .enlace-texto small {
-
-    color: #766e69;
-
+    color: #7a726e;
     font-size: 11px;
-
     letter-spacing: 5px;
 }
 
-
 .enlace-texto h3 {
-
-    margin-top: 9px;
-
+    margin-top: 10px;
     font-family: var(--cinzel);
-
-    font-size: 24px;
-
+    font-size: 26px;
     font-weight: 500;
-
     letter-spacing: 4px;
-
     color: #ddd6d2;
 }
 
-
-/* ============================================= */
-/* CASILLA VACÍA PARA STICKER DE INSTAGRAM */
-/* ============================================= */
-
 .sticker-slot {
-
     position: relative;
-
     z-index: 5;
-
-    width: 650px;
-    height: 92px;
-
+    width: 670px;
+    height: 96px;
     margin: 24px auto 0;
-
-    border:
-        1px solid
-        rgba(146,10,44,.58);
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(146,10,44,.02),
-            rgba(146,10,44,.08),
-            rgba(146,10,44,.02)
-        );
-
-    box-shadow:
-
-        inset 0 0 30px
-        rgba(146,10,44,.035),
-
-        0 15px 40px
-        rgba(0,0,0,.25);
+    border: 1px solid rgba(146,10,44,.58);
+    background: linear-gradient(90deg, rgba(146,10,44,.02), rgba(146,10,44,.08), rgba(146,10,44,.02));
+    box-shadow: inset 0 0 30px rgba(146,10,44,.035), 0 15px 40px rgba(0,0,0,.25);
 }
-
-
-/* pequeñas esquinas */
 
 .sticker-slot::before,
 .sticker-slot::after {
-
     content: "";
-
     position: absolute;
-
     width: 32px;
     height: 1px;
-
     top: 50%;
-
     background: var(--rojo);
 }
 
+.sticker-slot::before { left: -16px; }
+.sticker-slot::after { right: -16px; }
 
-.sticker-slot::before {
-    left: -16px;
-}
-
-
-.sticker-slot::after {
-    right: -16px;
-}
-
-
-/* ============================================= */
-/* PIE */
-/* ============================================= */
-
-.footer {
-
+.sticker-slot .sticker-texto {
     position: absolute;
-
-    z-index: 5;
-
-    left: 0;
-    right: 0;
-
-    bottom: 74px;
-
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-}
-
-
-.autor {
-
-    font-family: var(--cinzel);
-
-    color: #b2aaa6;
-
-    font-size: 15px;
-
-    letter-spacing: 6px;
-}
-
-
-.instagram {
-
-    margin-top: 12px;
-
-    color: #625b58;
-
-    font-size: 12px;
-
+    color: #766d69;
+    font-size: 11px;
     letter-spacing: 4px;
 }
 
+.footer {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    bottom: 62px;
+    text-align: center;
+}
+
+.autor {
+    font-family: var(--cinzel);
+    color: #bdb5b0;
+    font-size: 15px;
+    letter-spacing: 6px;
+}
+
+.instagram {
+    margin-top: 10px;
+    color: #655d5a;
+    font-size: 12px;
+    letter-spacing: 4px;
+}
 
 .generos {
-
-    margin-top: 25px;
-
+    margin-top: 22px;
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     gap: 21px;
-
     color: #766e6a;
-
     font-family: var(--literaria);
-
     font-size: 19px;
 }
 
+.generos span { color: var(--rojo); }
 
-.generos span {
-    color: var(--rojo);
-}
-
-
-/* ============================================= */
-/* SIN SCROLL */
-/* ============================================= */
-
-::-webkit-scrollbar {
-    display: none;
-}
-
+::-webkit-scrollbar { display: none; }
 </style>
-
 </head>
-
-
 <body>
-
-
-<div class="story"
-     id="story">
-
-
-    <!-- fondo -->
-
+<div class="story" id="story">
     <div class="luz-central"></div>
-
     <div class="halo-izquierda"></div>
-
     <div class="halo-derecha"></div>
-
     <div class="linea-superior"></div>
 
-
-    <!-- ======================================== -->
-    <!-- TÍTULO -->
-    <!-- ======================================== -->
-
     <header class="header">
+        <div class="logo-wrap">
+            <img src="../Simbolo-sin_fondo.png" alt="Símbolo de Sinfonía de Horrores">
+        </div>
 
-
-        <p class="micro">
-
-            DOS RELATOS · DOS PUERTAS HACIA LO DESCONOCIDO
-
-        </p>
-
+        <p class="micro">RELATOS DE HORROR · MISTERIO · LO DESCONOCIDO</p>
 
         <h1>
-
-            <span>
-                Sinfonía
-            </span>
-
-            <span class="de">
-                de
-            </span>
-
-            <span>
-                Horrores
-            </span>
-
+            <span>Sinfonía</span>
+            <span class="de">de</span>
+            <span>Horrores</span>
         </h1>
 
-
         <div class="ornamento">
-
             <span></span>
-
-            <b>
-                ◆
-            </b>
-
+            <b>◆</b>
             <span></span>
-
         </div>
 
-
+        <div class="runa-frase">SIGUE ESCUCHANDO</div>
     </header>
 
-
-    <!-- ======================================== -->
-    <!-- MENSAJE PARA TU INSTAGRAM PERSONAL -->
-    <!-- ======================================== -->
-
     <section class="mensaje-personal">
-
-
-        <p class="sobre">
-
-            ALGO QUE TAMBIÉN HAGO
-
-        </p>
-
-
+        <p class="sobre">SI TE DA CURIOSIDAD LEER LO QUE ESCRIBO</p>
         <p>
-
-            De vez en cuando escribo
-
-            <strong>
-                historias de horror.
-            </strong>
-
+            Aquí puedes encontrar <strong>dos de mis relatos</strong>.
             <br>
-
-            Si te da curiosidad leerlas,
-            puedes encontrarlas aquí.
-
+            Si entras… tal vez <strong>ya no salgas igual</strong>.
         </p>
-
-
     </section>
-
-
-    <!-- ======================================== -->
-    <!-- LIBROS -->
-    <!-- ======================================== -->
 
     <section class="libros">
-
-
-        <!-- LA CUEVA -->
-
         <article class="libro">
-
-
             <div class="marco">
-
-
-                <img
-                    src="../La Cueva.jpg"
-                    alt="Portada de La Cueva">
-
-
-                <div class="estado">
-
-                    DISPONIBLE
-
-                </div>
-
-
+                <img src="../La Cueva.jpg" alt="Portada de La Cueva">
+                <div class="estado">DISPONIBLE</div>
             </div>
-
-
             <div class="info">
-
-                <small>
-                    RELATO
-                </small>
-
-                <h2>
-                    La Cueva
-                </h2>
-
+                <small>RELATO</small>
+                <h2>La Cueva</h2>
+                <p>Un descenso hacia lo que no debía ser encontrado.</p>
             </div>
-
-
         </article>
 
-
-        <!-- CIELO ROJO -->
-
         <article class="libro">
-
-
             <div class="marco">
-
-
-                <img
-                    src="../Cielo Rojo.jpg"
-                    alt="Portada de Cielo Rojo">
-
-
-                <div class="estado">
-
-                    DISPONIBLE
-
-                </div>
-
-
+                <img src="../Cielo Rojo.jpg" alt="Portada de Cielo Rojo">
+                <div class="estado">DISPONIBLE</div>
             </div>
-
-
             <div class="info">
-
-                <small>
-                    RELATO
-                </small>
-
-                <h2>
-                    Cielo Rojo
-                </h2>
-
+                <small>RELATO</small>
+                <h2>Cielo Rojo</h2>
+                <p>Cuando el cielo cambia, también cambia lo que nos mira.</p>
             </div>
-
-
         </article>
-
-
     </section>
 
-
-    <!-- ======================================== -->
-    <!-- LEMA -->
-    <!-- ======================================== -->
-
-    <section class="lema">
-
-
-        <p>
-
+    <section class="cta-wrap">
+        <div class="lema">
             Cada relato es una nota.
-
             <br>
-
-            <strong>
-                El horror es la melodía.
-            </strong>
-
-        </p>
-
-
-    </section>
-
-
-    <!-- ======================================== -->
-    <!-- ÁREA DEL LINK -->
-    <!-- ======================================== -->
-
-    <section class="enlace-texto">
-
-
-        <small>
-
-            SI QUIERES LEER LO QUE ESCRIBO
-
-        </small>
-
-
-        <h3>
-
-            MIS RELATOS ESTÁN AQUÍ
-
-        </h3>
-
-
-    </section>
-
-
-    <!--
-        ESTA CASILLA QUEDA VACÍA.
-        DESPUÉS DE HACER LA CAPTURA,
-        PONES AQUÍ ENCIMA EL STICKER
-        "ENLACE" DE INSTAGRAM.
-    -->
-
-    <div class="sticker-slot"></div>
-
-
-    <!-- ======================================== -->
-    <!-- PIE -->
-    <!-- ======================================== -->
-
-    <footer class="footer">
-
-
-        <p class="autor">
-
-            GUILLERMO REYES
-
-        </p>
-
-
-        <p class="instagram">
-
-            @REYESJEAGER
-
-        </p>
-
-
-        <div class="generos">
-
-
-            Horror
-
-
-            <span>
-                ◇
-            </span>
-
-
-            Misterio
-
-
-            <span>
-                ◇
-            </span>
-
-
-            Lo desconocido
-
-
+            <strong>El horror es la melodía.</strong>
         </div>
 
+        <section class="enlace-texto">
+            <small>TOCA EL ENLACE EN MI HISTORIA</small>
+            <h3>ENTRA A SINFONÍA DE HORRORES</h3>
+        </section>
 
+        <div class="sticker-slot">
+            <div class="sticker-texto">AQUÍ COLOCA EL STICKER DE ENLACE DE INSTAGRAM</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="autor">GUILLERMO REYES</p>
+        <p class="instagram">@REYESJEAGER</p>
+        <div class="generos">
+            Horror <span>◇</span> Misterio <span>◇</span> Lo desconocido
+        </div>
     </footer>
-
-
 </div>
 
-
-<!-- ============================================= -->
-<!-- AJUSTE AUTOMÁTICO IPHONE / COMPUTADORA -->
-<!-- ============================================= -->
-
 <script>
-
-
 function ajustarHistoria() {
-
-
-    const historia =
-        document.getElementById("story");
-
-
-    if (!historia) {
-        return;
-    }
-
+    const historia = document.getElementById("story");
+    if (!historia) return;
 
     const ANCHO = 1080;
-
     const ALTO = 1920;
 
-
     let anchoDisponible;
-
     let altoDisponible;
 
-
     if (window.visualViewport) {
-
-
-        anchoDisponible =
-            window.visualViewport.width;
-
-
-        altoDisponible =
-            window.visualViewport.height;
-
-
+        anchoDisponible = window.visualViewport.width;
+        altoDisponible = window.visualViewport.height;
     } else {
-
-
-        anchoDisponible =
-            window.innerWidth;
-
-
-        altoDisponible =
-            window.innerHeight;
-
-
+        anchoDisponible = window.innerWidth;
+        altoDisponible = window.innerHeight;
     }
-
 
     const margen = 8;
-
-
     anchoDisponible -= margen;
-
     altoDisponible -= margen;
 
+    const escalaAncho = anchoDisponible / ANCHO;
+    const escalaAlto = altoDisponible / ALTO;
+    let escala = Math.min(escalaAncho, escalaAlto);
+    escala = Math.min(escala, 1);
 
-    const escalaAncho =
-        anchoDisponible / ANCHO;
-
-
-    const escalaAlto =
-        altoDisponible / ALTO;
-
-
-    let escala =
-        Math.min(
-            escalaAncho,
-            escalaAlto
-        );
-
-
-    escala =
-        Math.min(
-            escala,
-            1
-        );
-
-
-    historia.style.transform =
-        `scale(${escala})`;
-
+    historia.style.transform = `scale(${escala})`;
 }
 
-
-window.addEventListener(
-    "load",
-    ajustarHistoria
-);
-
-
-window.addEventListener(
-    "resize",
-    ajustarHistoria
-);
-
-
-window.addEventListener(
-    "orientationchange",
-    () => {
-
-        setTimeout(
-            ajustarHistoria,
-            150
-        );
-
-    }
-);
-
-
+window.addEventListener("load", ajustarHistoria);
+window.addEventListener("resize", ajustarHistoria);
+window.addEventListener("orientationchange", () => {
+    setTimeout(ajustarHistoria, 150);
+});
 if (window.visualViewport) {
-
-
-    window.visualViewport.addEventListener(
-        "resize",
-        ajustarHistoria
-    );
-
+    window.visualViewport.addEventListener("resize", ajustarHistoria);
 }
-
-
 </script>
-
-
 </body>
-
 </html>
